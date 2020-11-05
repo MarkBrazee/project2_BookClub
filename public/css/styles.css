@@ -45,3 +45,13 @@ button.edit {
 .top-30 {
   margin-top: 30px;
 }
+
+
+.navbar {
+  background-color: aqua;
+}
+
+.card .reads{
+  border: 1px solid black;
+}
+
