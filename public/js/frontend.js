@@ -10,24 +10,28 @@ $(document).ready(function(){
     };
   
     $.ajax(settings).done(function (response) {
-      console.log(response.items);
+      
       response.items.forEach(element => {
-        console.log(element.volumeInfo.title)
-        console.log(element.volumeInfo.authors[0])
-        console.log(element.volumeInfo.imageLinks.smallThumbnail)
-        searchedBook = $("<div>")
+        searchedBook = $("<div>").addClass("card")
         title = $("<p>").text(element.volumeInfo.title)
         authors = $("<p>").text(element.volumeInfo.authors[0])
         coverPic = $("<img>").attr("src",element.volumeInfo.imageLinks.smallThumbnail)
+        coverPic.attr("class","coverPic")
         searchedBook.append(title)
         searchedBook.append(authors)
         searchedBook.append(coverPic)
         $("#searchRes").append(searchedBook)
+        $(searchedBook).on("click",(event)=>{
+          console.log("click")
+          console.log(event.currentTarget)
+          // let newClickedBook = {
+          //   book_title: ,
+          //   author_name: ,
+          // }
+        })
       });
-      $("#testArea").val(response.items[0].volumeInfo.title)
     });
     
-
 
   })
   

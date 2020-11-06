@@ -8,9 +8,6 @@ module.exports = function( sequelize, DataTypes){
     author_name: {
         type: Sequelize.STRING
     },
-    book_description: {
-        type: Sequelize.STRING
-    },
     book_cover: {
         type: Sequelize.STRING
     }
