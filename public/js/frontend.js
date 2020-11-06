@@ -12,9 +12,11 @@ $(document).ready(function(){
     $.ajax(settings).done(function (response) {
       
       response.items.forEach(element => {
-        searchedBook = $("<div>").addClass("card")
-        title = $("<h3>").text(element.volumeInfo.title)
-        authors = $("<h4>").text(element.volumeInfo.authors[0])
+
+        searchedBook = $("<div>").addClass("card test")
+        title = $("<p>").text(element.volumeInfo.title)
+        authors = $("<p>").text(element.volumeInfo.authors[0])
+
         coverPic = $("<img>").attr("src",element.volumeInfo.imageLinks.smallThumbnail)
         coverPic.attr("class","coverPic")
         searchedBook.append(title)

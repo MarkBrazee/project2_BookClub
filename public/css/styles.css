@@ -63,9 +63,18 @@ button.edit {
   background-color: #DEFCE7;
 }
 
-.back {
-  background-image: url=('/bookStack.png');
+body {
+  background-image: url=('https://www.google.com/imgres?imgurl=https%3A%2F%2Fassets.entrepreneur.com%2Fcontent%2F3x2%2F2000%2F20191219170611-GettyImages-1152794789.jpeg%3Fwidth%3D700%26crop%3D2%3A1&imgrefurl=https%3A%2F%2Fwww.entrepreneur.com%2Fslideshow%2F343776&tbnid=_W-eQj1_Cc1WnM&vet=12ahUKEwjr7J_mxu7sAhW8FTQIHYB9CkoQMygBegUIARDaAQ..i&docid=Lojg2yxDRj2lLM&w=700&h=350&q=book&ved=2ahUKEwjr7J_mxu7sAhW8FTQIHYB9CkoQMygBegUIARDaAQ');
   background: display;
 }
+
+/* search cards */
+.test{ 
+  width: 150px;
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
 
 
