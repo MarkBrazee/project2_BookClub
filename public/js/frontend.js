@@ -1,15 +1,12 @@
 $(document).ready(function(){
-
-  $(".testbtn").on("click", function(event){
+  $("#bookSearch").on("click", function(event){
     event.preventDefault();
-    let searchTerm = $(".test").val()
-    console.log(searchTerm)
+    let searchTerm = $("#searchTerms").val()
     const settings = {
       "async": true,
       "crossDomain": true,
       "url": "https://www.googleapis.com/books/v1/volumes?q=" + searchTerm,
       "method": "GET"
-      
     };
   
     $.ajax(settings).done(function (response) {
@@ -17,15 +14,8 @@ $(document).ready(function(){
       response.items.forEach(element => {
         console.log(element.volumeInfo.title)
         console.log(element.volumeInfo.authors[0])
-        console.log(element.volumeInfo)
-
-        let bookObj = $("<div>")
-        let bookName = $("<p>").text(element.volumeInfo.title)
-        bookName.addClass("card-header")
-        bookObj.append(bookName)
-        $(".card").append(bookObj)
+        console.log(element.volumeInfo.imageLinks.smallThumbnail)
       });
-      
       $("#testArea").val(response.items[0].volumeInfo.title)
     });
     
