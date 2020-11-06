@@ -15,6 +15,14 @@ $(document).ready(function(){
         console.log(element.volumeInfo.title)
         console.log(element.volumeInfo.authors[0])
         console.log(element.volumeInfo.imageLinks.smallThumbnail)
+        searchedBook = $("<div>")
+        title = $("<p>").text(element.volumeInfo.title)
+        authors = $("<p>").text(element.volumeInfo.authors[0])
+        coverPic = $("<img>").attr("src",element.volumeInfo.imageLinks.smallThumbnail)
+        searchedBook.append(title)
+        searchedBook.append(authors)
+        searchedBook.append(coverPic)
+        $("#searchRes").append(searchedBook)
       });
       $("#testArea").val(response.items[0].volumeInfo.title)
     });
