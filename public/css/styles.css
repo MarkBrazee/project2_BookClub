@@ -48,6 +48,8 @@ button.edit {
 
 .card {
   border: 1px solid black;
+  margin: 200px;
+
 }
 
 
@@ -55,17 +57,32 @@ button.edit {
   max-width: 50px; max-height: 50px;
 }
 
+
+/* book cards in the current section */
 .current{
-  background-color: #7FA39E;
+  background-color: #DEFCE7;
+  margin: 20px;
+  margin-left: 50px;
+  box-shadow: 0 8px 16px 0 #696D7F;
 }
 
+/* main card of current section */
+.currentRead {
+  padding-top: 40px;
+  text-align: center;
+
+
+}
+
+/* bottom 3 cards */
 .other{
   background-color: #DEFCE7;
+  box-shadow: 0 8px 16px 0 #696D7F;
 }
 
 body {
-  background-image: url=('https://www.google.com/imgres?imgurl=https%3A%2F%2Fassets.entrepreneur.com%2Fcontent%2F3x2%2F2000%2F20191219170611-GettyImages-1152794789.jpeg%3Fwidth%3D700%26crop%3D2%3A1&imgrefurl=https%3A%2F%2Fwww.entrepreneur.com%2Fslideshow%2F343776&tbnid=_W-eQj1_Cc1WnM&vet=12ahUKEwjr7J_mxu7sAhW8FTQIHYB9CkoQMygBegUIARDaAQ..i&docid=Lojg2yxDRj2lLM&w=700&h=350&q=book&ved=2ahUKEwjr7J_mxu7sAhW8FTQIHYB9CkoQMygBegUIARDaAQ');
-  background: display;
+  background-image: url('../assets/bookStack.png');
+  
 }
 
 /* search cards */
@@ -76,5 +93,18 @@ body {
   padding: 0 10px;
 }
 
+.btn-primary{
+  background-color: #6C7C69;
+  border: #6C7C69;
+}
 
+.btn-primary:hover{
+  background-color: #B1C9B9;
+
+}
+
+.btn-primary:active{
+  background-color: #487D58;
+
+}
 
