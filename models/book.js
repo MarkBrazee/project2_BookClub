@@ -1,18 +1,18 @@
-const { Sequelize } = require(".");
+const { Sequelize } = require("sequelize");
 
 module.exports = function( sequelize, DataTypes){
-  let bookTable = sequelize.define('tableName', {
+  let bookTable = sequelize.define('bookTable', {
     book_title: {
-        type: sequelize.STRING
+        type: Sequelize.STRING
     },
     author_name: {
-        type: sequelize.STRING
+        type: Sequelize.STRING
     },
     book_description: {
-        type: sequelize.STRING
+        type: Sequelize.STRING
     },
     book_cover: {
-        type: sequelize.STRING
+        type: Sequelize.STRING
     }
 },
 {freezeTableName: true});
