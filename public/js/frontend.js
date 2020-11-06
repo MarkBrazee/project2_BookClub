@@ -25,13 +25,18 @@ $(document).ready(function(){
         $("#searchRes").append(searchedBook)
         $(searchedBook).on("click",(event)=>{
           console.log("click")
-          console.log(event.currentTarget)
           let newClickedBook = {
             book_title: event.currentTarget.children[0].innerText,
             author_name: event.currentTarget.children[1].innerText,
             book_cover: event.currentTarget.children[2].src
           }
           console.log(newClickedBook)
+          $.ajax("api/books", {
+            type: "POST",
+            data: newClickedBook
+          }).then(function(){
+            // location.reload();
+          })
         })
       });
     });
