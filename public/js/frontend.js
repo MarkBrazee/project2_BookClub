@@ -13,8 +13,8 @@ $(document).ready(function(){
       
       response.items.forEach(element => {
         searchedBook = $("<div>").addClass("card")
-        title = $("<p>").text(element.volumeInfo.title)
-        authors = $("<p>").text(element.volumeInfo.authors[0])
+        title = $("<h3>").text(element.volumeInfo.title)
+        authors = $("<h4>").text(element.volumeInfo.authors[0])
         coverPic = $("<img>").attr("src",element.volumeInfo.imageLinks.smallThumbnail)
         coverPic.attr("class","coverPic")
         searchedBook.append(title)
@@ -23,10 +23,11 @@ $(document).ready(function(){
         $("#searchRes").append(searchedBook)
         $(searchedBook).on("click",(event)=>{
           console.log("click")
-          console.log(event.currentTarget)
+          console.log(event.currentTarget.div)
           // let newClickedBook = {
           //   book_title: ,
           //   author_name: ,
+          //   book_cover: 
           // }
         })
       });
