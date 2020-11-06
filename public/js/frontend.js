@@ -24,10 +24,12 @@ $(document).ready(function(){
         $(searchedBook).on("click",(event)=>{
           console.log("click")
           console.log(event.currentTarget)
-          // let newClickedBook = {
-          //   book_title: ,
-          //   author_name: ,
-          // }
+          let newClickedBook = {
+            book_title: event.currentTarget.children[0].innerText,
+            author_name: event.currentTarget.children[1].innerText,
+            book_cover: event.currentTarget.children[2].src
+          }
+          console.log(newClickedBook)
         })
       });
     });
