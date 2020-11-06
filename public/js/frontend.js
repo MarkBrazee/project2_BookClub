@@ -22,15 +22,20 @@ $(document).ready(function(){
       
       response.items.forEach(element => {
 
-        searchedBook = $("<div>").addClass("card test")
-        title = $("<p>").text(element.volumeInfo.title)
-        authors = $("<p>").text(element.volumeInfo.authors[0])
+        searchedBook = $("<div>").addClass("card")
+        
+        title = $("<h5>").text(element.volumeInfo.title).addClass("cardBookTitle")
+        authors = $("<p>").text(element.volumeInfo.authors[0]).addClass("cardBookAuthor")
 
         coverPic = $("<img>").attr("src",element.volumeInfo.imageLinks.smallThumbnail)
-        coverPic.attr("class","coverPic")
-        searchedBook.append(title)
-        searchedBook.append(authors)
+        coverPic.attr("class","coverPic card-img-top")
         searchedBook.append(coverPic)
+        cardBody = $("<div>").addClass("overlay")
+        searchedBook.append(cardBody)
+        // searchedBook.append(searchedBook)
+        // searchedBook.append(title)
+        // searchedBook.append(authors)
+        
         $("#searchRes").append(searchedBook)
         $(searchedBook).on("click",(event)=>{
           console.log("click")
