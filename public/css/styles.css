@@ -51,7 +51,20 @@ button.edit {
   background-color: aqua;
 }
 
-.card .reads{
+.card {
   border: 1px solid black;
+}
+
+.current{
+  background-color: #7FA39E;
+}
+
+.other{
+  background-color: #DEFCE7;
+}
+
+.back {
+  background-image: url=('/bookStack.png');
+  background: display;
 }
 
