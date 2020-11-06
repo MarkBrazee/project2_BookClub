@@ -2,13 +2,8 @@ button.submit {
   float: right;
 }
 
-form#cms {
-  margin-top: 50px;
-}
 
-#cms textarea {
-  resize: none;
-}
+
 
 .card-header button.delete,
 button.edit {
@@ -55,6 +50,11 @@ button.edit {
   border: 1px solid black;
 }
 
+
+.coverPic {
+  max-width: 50px; max-height: 50px;
+}
+
 .current{
   background-color: #7FA39E;
 }
@@ -67,4 +67,5 @@ button.edit {
   background-image: url=('/bookStack.png');
   background: display;
 }
+
 
