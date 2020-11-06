@@ -46,10 +46,26 @@ button.edit {
   background-color: aqua;
 }
 
-.card .reads{
+.card {
   border: 1px solid black;
 }
+
 
 .coverPic {
   max-width: 50px; max-height: 50px;
 }
+
+.current{
+  background-color: #7FA39E;
+}
+
+.other{
+  background-color: #DEFCE7;
+}
+
+.back {
+  background-image: url=('/bookStack.png');
+  background: display;
+}
+
+
