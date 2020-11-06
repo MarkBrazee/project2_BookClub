@@ -16,7 +16,6 @@ $(document).ready(function(){
         console.log(element.volumeInfo.authors[0])
         console.log(element.volumeInfo.imageLinks.smallThumbnail)
       });
-      
       $("#testArea").val(response.items[0].volumeInfo.title)
     });
     
