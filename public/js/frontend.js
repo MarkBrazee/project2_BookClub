@@ -1,4 +1,13 @@
 $(document).ready(function(){
+  // $.get("api/books",(data)=>{
+  //   console.log(data)
+  //   res.json(data)
+  //   // let hbsObject = {
+  //   //   bookTable: data
+  //   // }
+  //   // console.log(hbsObject)
+    
+  // })
   $("#bookSearch").on("click", function(event){
     event.preventDefault();
     let searchTerm = $("#searchTerms").val()
