@@ -1,5 +1,13 @@
+let db = require("../models")
 module.exports = function(app) {
   app.get("/", function(req, res){
-    res.render('index')
+    db.bookTable.findAll({raw: true}).then((DBGrab)=>{
+      // console.log(DBGrab)
+      // let hbsObject = {
+      //   bookTable: DBGrab
+      // }
+      // console.log(hbsObject)
+      res.render('index',{bookTable:DBGrab})
+    })
   });
 };
