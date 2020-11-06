@@ -32,7 +32,7 @@ $(document).ready(function(){
       });
     });
     
-
+    $("#searchRes").empty();
   })
   
   
