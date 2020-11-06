@@ -31,6 +31,12 @@ $(document).ready(function(){
             book_cover: event.currentTarget.children[2].src
           }
           console.log(newClickedBook)
+          $.ajax("api/books", {
+            type: "POST",
+            data: newClickedBook
+          }).then(function(){
+            // location.reload();
+          })
         })
       });
     });
