@@ -55,21 +55,19 @@ button.edit {
 }
 
 .card {
-  /* border: 1px solid black; */
-  width: 12em;
-  display: block;
-  margin: 25px;
-  float: right;
-  /* margin: 25px; */
-  /* margin-right: 28px; */
-  /* margin-top: 10px;*/
+  border: 1px solid black; 
+    width: 12em;
+
+    margin: 25px;
+    float: left;
   }
 
 
 .coverPic {
   width: 100%;
-  transition: .5s ease;
-  backface-visibility: hidden;
+    height: 300px;
+    transition: .5s ease;
+    backface-visibility: hidden;
 }
 .overlay{
   transition: .5s ease;
@@ -117,7 +115,8 @@ button.edit {
 
 body {
   background-image: url('../assets/bookStack.png');
-  
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 /* search cards */

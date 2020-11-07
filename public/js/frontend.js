@@ -24,8 +24,8 @@ $(document).ready(function(){
 
         searchedBook = $("<div>").addClass("card")
         
-        title = $("<h5>").text(element.volumeInfo.title).addClass("cardBookTitle")
-        authors = $("<p>").text(element.volumeInfo.authors[0]).addClass("cardBookAuthor")
+        // title = $("<h5>").text(element.volumeInfo.title).addClass("cardBookTitle")
+        // authors = $("<p>").text(element.volumeInfo.authors[0]).addClass("cardBookAuthor")
 
         coverPic = $("<img>").attr("src",element.volumeInfo.imageLinks.smallThumbnail)
         coverPic.attr("class","coverPic card-img-top")
