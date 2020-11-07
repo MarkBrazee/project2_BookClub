@@ -55,11 +55,12 @@ button.edit {
 }
 
 .card {
-  border: 1px solid black; 
+  
     width: 12em;
-
+    box-shadow: 2px 2px 6px #696969;
     margin: 25px;
     float: left;
+    border-radius: 5%;
   }
 
 
@@ -68,6 +69,8 @@ button.edit {
     height: 300px;
     transition: .5s ease;
     backface-visibility: hidden;
+    border-radius: 5%;
+    border: 6px solid #eee
 }
 .overlay{
   transition: .5s ease;
@@ -82,10 +85,17 @@ button.edit {
 
 .card:hover .coverPic {
   opacity: 0.3;
+  border: 5px solid #696969;
+  border-radius:  5%;
 }
 
 .card:hover .overlay {
   opacity: 1;
+  
+}
+
+.card:active{
+  transform:scale(0.95);
 }
 
 
@@ -117,6 +127,9 @@ body {
   background-image: url('../assets/bookStack.png');
   background-repeat: no-repeat;
   background-attachment: fixed;
+  width: 100%;
+    display: block;
+    margin: 0 auto;
 }
 
 /* search cards */
