@@ -62,8 +62,8 @@ $(document).ready(function(){
       type: "PUT",
       data: newReadState
     }).then(function(){
-      location.reload()
     })
+    location.reload()
   })
 
   $(".delete-book").on("click",(event3)=>{
