@@ -1,4 +1,4 @@
-# Project 2 Working Title
+# Project 2 Shelf Indulgence
  ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 
 ## Info: 
@@ -8,11 +8,12 @@ Search for books using an api, add those books to a database of books you want t
 [Installation](#Installation) || [Usage](#Usage) || [License](#License) || [Contributing](#Contributing) || [Tests](#Tests) || [Questions](#Questions)
 
 ### Installation:
-Application is hosted on heroku at <link>
+Application is hosted on heroku at https://lit-savannah-78060.herokuapp.com/
+
 
 
 ### Usage:
-On opening the page:
+Select the Heroku link listed in the Installation section, above. In the Shelf Indulgence browser page, the user may view what the website authors are currently reading, upcoming reads, recommendations for the viewer and a Read It Again section. In addition, the user may search for a book, join the book club and join a chat to discuss a book.
 
 #### Usage pics:
 ![open](img link)
@@ -27,7 +28,7 @@ On opening the page:
  This project is licensed under the MIT license.
 
 ### Contributing:
-Other can contribute with additional table types, like movies, games, etc.
+Please contribute to enhance the functionality of this code with additional table types, like movies, games, etc. Please adhere to the Code of Conduct for the Contributer Covenant, version 2.0, at https://www.contributor-covenant.org/version/2/0/code_of_conduct.html.
 
 
 ### Questions:
