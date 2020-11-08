@@ -98,7 +98,9 @@ button.edit {
   transform:scale(0.95);
 }
 
-
+.nonDisplay {
+  display: none;
+}
 
 
 /* book cards in the current section */

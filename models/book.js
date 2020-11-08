@@ -10,6 +10,9 @@ module.exports = function( sequelize, DataTypes){
     },
     book_cover: {
         type: Sequelize.STRING
+    },
+    read_status: {
+      type: Sequelize.BOOLEAN
     }
 },
 {freezeTableName: true});

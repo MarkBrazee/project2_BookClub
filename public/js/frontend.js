@@ -1,13 +1,5 @@
 $(document).ready(function(){
-  // $.get("api/books",(data)=>{
-  //   console.log(data)
-  //   res.json(data)
-  //   // let hbsObject = {
-  //   //   bookTable: data
-  //   // }
-  //   // console.log(hbsObject)
-    
-  // })
+  
   $("#bookSearch").on("click", function(event){
     event.preventDefault();
     let searchTerm = $("#searchTerms").val()
@@ -24,8 +16,8 @@ $(document).ready(function(){
 
         searchedBook = $("<div>").addClass("card")
         
-        // title = $("<h5>").text(element.volumeInfo.title).addClass("cardBookTitle")
-        // authors = $("<p>").text(element.volumeInfo.authors[0]).addClass("cardBookAuthor")
+        title = $("<h5>").text(element.volumeInfo.title).addClass("nonDisplay")
+        authors = $("<p>").text(element.volumeInfo.authors[0]).addClass("nonDisplay")
 
         coverPic = $("<img>").attr("src",element.volumeInfo.imageLinks.smallThumbnail)
         coverPic.attr("class","coverPic card-img-top")
@@ -33,16 +25,18 @@ $(document).ready(function(){
         cardBody = $("<div>").addClass("overlay")
         searchedBook.append(cardBody)
         // searchedBook.append(searchedBook)
-        // searchedBook.append(title)
-        // searchedBook.append(authors)
+        searchedBook.append(title)
+        searchedBook.append(authors)
         
         $("#searchRes").append(searchedBook)
         $(searchedBook).on("click",(event)=>{
           console.log("click")
+          console.log(event.currentTarget.children[2].innerText)
           let newClickedBook = {
-            book_title: event.currentTarget.children[0].innerText,
-            author_name: event.currentTarget.children[1].innerText,
-            book_cover: event.currentTarget.children[2].src
+            book_title: event.currentTarget.children[2].innerText,
+            author_name: event.currentTarget.children[3].innerText,
+            book_cover: event.currentTarget.children[0].src,
+            read_status: false
           }
           console.log(newClickedBook)
           $.ajax("api/books", {
@@ -58,5 +52,20 @@ $(document).ready(function(){
     $("#searchRes").empty();
   })
   
-  
+  $(".read-me").on("click",(event2)=>{
+    console.log("click")
+    let id = $(this).context.activeElement.dataset.id
+    console.log(id)
+    let newReadState = {
+      read_status: true
+    };
+
+    $.ajax(`api/books/${id}`, {
+      type: "PUT",
+      data: newReadState
+    }).then(function(){
+      console.log("updated")
+      location.reload()
+    })
+  })
 })
