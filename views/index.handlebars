@@ -88,6 +88,7 @@
           {{#unless read_status}}
             <div class="card-header">
               {{this.book_title}}<button type="button" class="read-me btn btn-success" data-id="{{this.id}}">I read this</button>
+              <button type="button" class="delete-book btn btn-danger" data-id="{{this.id}}">remove</button>
             </div>
           {{/unless}}
         {{/each}}
@@ -108,6 +109,7 @@
           {{#if read_status}}
             <div class="card-header">
               {{this.book_title}}
+              <button type="button" class="delete-book btn btn-danger" data-id="{{this.id}}">remove</button>
             </div>
           {{/if}}
         {{/each}}

@@ -36,4 +36,14 @@ module.exports = function(app){
       res.json(result)
     })
   })
+
+  app.delete("/api/books/:id", (req,res)=>{
+    db.bookTable.destroy({
+      where: {
+        id: req.params.id
+      }
+    }).then((data)=>{
+      res.json(data)
+    })
+  })
 };
