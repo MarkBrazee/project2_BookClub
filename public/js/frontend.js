@@ -24,7 +24,6 @@ $(document).ready(function(){
         searchedBook.append(coverPic)
         cardBody = $("<div>").addClass("overlay")
         searchedBook.append(cardBody)
-        // searchedBook.append(searchedBook)
         searchedBook.append(title)
         searchedBook.append(authors)
         
@@ -55,7 +54,6 @@ $(document).ready(function(){
   $(".read-me").on("click",(event2)=>{
     console.log("click")
     let id = $(this).context.activeElement.dataset.id
-    console.log(id)
     let newReadState = {
       read_status: true
     };
@@ -64,7 +62,6 @@ $(document).ready(function(){
       type: "PUT",
       data: newReadState
     }).then(function(){
-      console.log("updated")
       location.reload()
     })
   })
