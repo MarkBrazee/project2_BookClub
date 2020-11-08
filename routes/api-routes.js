@@ -24,4 +24,18 @@ module.exports = function(app){
       res.json(data)
     });
   });
+
+  app.put("/api/books/:id", function(req,res){
+    let condition = `id = ${req.params.id}`
+    console.log(condition)
+    db.bookTable.update({
+      read_status: req.body.read_status
+    }, {
+      where: {
+        id: req.params.id
+      }
+    }, (result)=>{
+      res.json(result)
+    })
+  })
 };

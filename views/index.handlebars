@@ -83,7 +83,15 @@
   <div class="card other ">
     <div class="card-body text-center comming">
       <h3>Upcoming Reads</h3>
-      <p class="card-text">Some text inside the first card</p>
+      <ul>
+        {{#each bookTable}}
+          {{#unless read_status}}
+            <div class="card-header">
+              {{this.book_title}}<button type="button" class="read-me btn btn-success" data-id="{{this.id}}">I read this</button>
+            </div>
+          {{/unless}}
+        {{/each}}
+      </ul>
     </div>
   </div>
   <div class="card other recommended">
@@ -95,21 +103,21 @@
   <div class="card other">
     <div class="card-body text-center pastBooks">
       <h3>Read It Again</h3>
-      <p class="card-text">Some text inside the third card</p>
+      <ul>
+        {{#each bookTable}}
+          {{#if read_status}}
+            <div class="card-header">
+              {{this.book_title}}
+            </div>
+          {{/if}}
+        {{/each}}
+      </ul>
     </div>
   </div>
 </div>
 
 {{!-- TEST AREA --}}
-<div class="card">
-  <ul>
-    {{#each bookTable}}
-    <li>
-       {{this.book_title}}
-    </li>
-    {{/each}}
-  </ul>
-</div>
+
 
 {{!-- footer --}}
 <footer class = "footer col-12"> 
