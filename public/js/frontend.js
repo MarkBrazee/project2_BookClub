@@ -65,4 +65,14 @@ $(document).ready(function(){
       location.reload()
     })
   })
+
+  $(".delete-book").on("click",(event3)=>{
+    let id = $(this).context.activeElement.dataset.id
+    console.log(id)
+    $.ajax(`api/books/${id}`, {
+      type: "DELETE"
+    }).then(function(){
+      location.reload()
+    })
+  })
 })
