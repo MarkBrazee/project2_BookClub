@@ -130,8 +130,10 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   width: 100%;
-    display: block;
-    margin: 0 auto;
+  display: block;
+  margin: 0 auto;
+    font-family: 'Merriweather', serif;
+
 }
 
 /* search cards */
@@ -288,7 +290,7 @@ body {
 .received-message{
   max-width: 38%;
   margin: 13px;
-  background-color: #46a6d1;
+  background-color: #3a8aafc9;
   color: #dce0e3;
   border-radius: 8px;
   padding: 8px;
@@ -300,7 +302,7 @@ body {
   max-width: 38%;
     margin: 9px;
     color: #dce0e3;
-    background: #dc9c3e;
+    background: #dc9c3ed6;
     border-radius: 8px;
     padding: 8px;
     margin-left: 59%;
@@ -347,27 +349,27 @@ body {
 }
 
 .title{
-  font-family: 'Berkshire Swash', cursive;
-
-  color: #323B40 ;
+  font-family: 'Playfair Display SC', serif;
+  color: #6c7c69 ;
+  
 }
 
 
 .smTitle {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Merriweather', serif;
   font-weight: bold;
   color: #323B40;
   width: 50%;
 }
 .card-text {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Merriweather', serif;
   color: #323B40
 }
 
 .nav{
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Merriweather', serif;
   font-weight: bold;
-  color: #323B40
+  color: #6c7c69;
 }
 
 .btn-primary{
@@ -386,6 +388,6 @@ body {
 }
 
 .card-heading{
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Merriweather', serif;
 }
 
