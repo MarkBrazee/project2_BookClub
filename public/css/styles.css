@@ -326,7 +326,7 @@ body {
 }
 
 .smTitle {
-  font-family:'Eagle Lake', cursive;
+  font-family: 'Inknut Antiqua', serif;
   font-weight: bold;
   color: #323B40;
 }
@@ -337,7 +337,7 @@ body {
 }
 
 .nav{
-  font-family: 'Eagle Lake', cursive;
+  font-family: 'Inknut Antiqua', serif;
   font-weight: bold;
   color: #323B40
 }
@@ -346,6 +346,3 @@ body {
   color:white;
 }
 
-.login-bg{
-  background-image: url(assets/login.png);
-}
