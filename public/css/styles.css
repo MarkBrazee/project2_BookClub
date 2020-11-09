@@ -157,3 +157,162 @@ body {
 
 }
 
+
+
+#message-container{
+  height: 77%;
+  background-color: #000;
+  width: 100%;
+  font-weight: 600;
+  position: fixed;
+  overflow: auto;
+  margin-top: 0%;
+  border-radius: 0%;
+}
+
+.chat-page{
+  background: black;
+}
+
+#message-input{
+  width: 97%;
+  height: 51px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 6px;
+  background: #212529;
+  border: none;
+  color: white;
+  padding-left: 14px;
+}
+
+#send-button{
+  margin: 13px;
+  background-color: #4CAF50;
+  height: 46px;
+  font-size: 20px;
+  font-weight: 500;
+  color: white;
+  width: 27%;
+}
+
+#send-container{
+  width: 100%;
+  display: block;
+  margin: 0px auto;
+  position: fixed;
+  bottom: 0;
+  margin-bottom: 2px;
+  background: #000;
+  padding-top: 21px;
+}
+
+
+
+.login-page{
+  background-color: #000;
+  height: 100%;
+  color: white;
+  padding-top: 8%;
+  position: fixed;
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+.username{
+  width: 50%;
+  height: 49px;
+  background-color: #000;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 2px solid white;
+  display: block;
+  margin: 0 auto;
+  color: white;
+  font-size: 24px;
+}
+
+
+
+
+.submit{
+  display: block;
+  margin: 0 auto;
+  margin-top: 25px;
+}
+
+.coverPic{
+  width: 100%;
+  transition: .5s ease;
+  backface-visibility: hidden;
+  height: 200px;
+}
+
+.user-disconnected, .user-connected{
+  color: #FFF;
+  margin: 9px;
+  width: 97%;
+}
+
+.received-message{
+  max-width: 48%;
+  margin: 13px;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 8px;
+  padding: 8px;
+  animation-duration: 0.5s;
+  animation-name: slideout;
+}
+
+.newMessage{
+  max-width: 50%;
+  margin: 9px;
+  color: #fff;
+  background: #007bff;
+  border-radius: 8px;
+  padding: 8px;
+  margin-left: 45%;
+  /* font-family: 'Roboto', sans-serif; */
+  animation-duration: 0.5s;
+  animation-name: slidein;
+}
+
+
+@keyframes slidein {
+  from {
+    margin-left: 0%;
+    width: 300%; 
+  }
+
+  to {
+    margin-right: 100%;
+    width: 100%;
+  }
+}
+
+@keyframes slideout {
+  from {
+    margin-left: 100%;
+    width: 300%; 
+  }
+
+  to {
+    margin-right: 0%;
+    width: 100%;
+  }
+}
+
+ @media only screen and (max-width: 600px) {
+  #message-container{
+      height: 80%;
+}
+}
+
+@media (min-width: 601px) and (max-width: 850px){
+  #message-container{
+      height: 61%;
+}
+}
