@@ -12,7 +12,7 @@
 {{!-- navigation bar --}}
 <div class="back">
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand nav" href="#">Shelf Indulgence</a>
+  <a class="navbar-brand nav" href="./index.handlebars">Shelf Indulgence</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -22,11 +22,8 @@
       <li class="nav-item active">
         <a class="nav-link nav" href="#">Home <span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link nav" href="#">Join</a>
-      </li>
        <li class="nav-item">
-        <a class="nav-link nav" href="#">Chat</a>
+        <a class="nav-link nav" href="#login-page">Chat</a>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
@@ -130,11 +127,11 @@
             </form>
         </div>
     
-    <div class="login-page window col-12">
+    <div class="login-page window col-12" id="login-page">
         <div id="form">
-            <h3 class="title text-center">What's your name?</h3>
+            <h3 class="chat-title text-center">What's your name?</h3>
             <input class="username text-center" type="text" maxlength="14" />
-            <input type="submit" class="btn btn-primary submit" value="submit"></input>
+            <input type="submit" class="btn btn-primary submitChat" value="submit"></input>
             
         </div>
     </div>
