@@ -1,4 +1,8 @@
-$(document).ready(function () {
+$(document).ready(function(){
+
+  $.get("/api/user_data").then(function(data){
+    $(".member-name").text(data.email);
+  });
   var socket = io(); // For Production
   // var socket = io('http://localhost:8080/') // For Testing LocalHost Server
   const messageContainer = document.getElementById("message-container")
