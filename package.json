@@ -1,28 +1,37 @@
 {
-  "name": "post-author-joins",
+  "name": "project2_bookclub",
   "version": "1.0.0",
-  "description": "",
+  "description": "![License](https://img.shields.io/badge/license-MIT-blue.svg)",
   "main": "server.js",
+  "directories": {
+    "test": "test"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
-    "watch": "nodemon server.js"
+    "start": "node server.js"
   },
-  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarkBrazee/project2_BookClub.git"
+  },
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MarkBrazee/project2_BookClub/issues"
+  },
+  "homepage": "https://github.com/MarkBrazee/project2_BookClub#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "express-handlebars": "^5.2.0",
     "express-session": "^1.17.1",
+    "jquery": "^3.5.1",
     "mysql2": "^2.2.5",
     "passport": "^0.4.1",
     "passport-local": "^1.0.0",
     "path": "^0.12.7",
-    "sequelize": "^4.44.4",
-    "jquery": "^3.5.1",
-    "socket.io": "^2.3.0"
+    "sequelize": "^6.3.5",
+    "socket.io": "^3.0.1"
   }
 }
