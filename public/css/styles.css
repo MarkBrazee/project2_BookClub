@@ -50,10 +50,6 @@ button.edit {
   float: left;
 }
 
-.navbar {
-  background-color: aqua;
-}
-
 .card {
   
     width: 12em;
@@ -350,3 +346,6 @@ body {
   color:white;
 }
 
+.login-bg{
+  background-image: url(assets/login.png);
+}
