@@ -154,11 +154,11 @@ body {
 .btn-primary:hover{
   background-color: #B1C9B9;
 
+
 }
 
 .btn-primary:active{
   background-color: #487D58;
-
 }
 
 #message-container{
@@ -330,3 +330,32 @@ body {
       height: 61%;
 }
 }
+
+
+/* titles/text styling */
+.title{
+  font-family: 'Berkshire Swash', cursive;
+  color: #323B40 ;
+}
+
+.smTitle {
+  font-family:'Eagle Lake', cursive;
+  font-weight: bold;
+  color: #323B40;
+}
+
+.card-text {
+  font-family: 'Inknut Antiqua', serif;
+  color: #323B40
+}
+
+.nav{
+  font-family: 'Eagle Lake', cursive;
+  font-weight: bold;
+  color: #323B40
+}
+
+.btn-primary{
+  color:white;
+}
+
