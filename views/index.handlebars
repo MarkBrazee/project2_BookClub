@@ -37,13 +37,14 @@
 
 {{!-- search results --}}
 <div id="searchRes" class="container">
+  <div class="wrapper"></div>
 </div>
 
 
 
 {{!-- currently reading section --}}
 <div class="container currentRead currentRead">
-  <h1 class= "title">Currently Reading</h1>
+  <h1 class= "card-heading">Currently Reading</h1>
   <div class="card-deck">
     <div class="card current">
         <img class="card-img-top" src="..." alt="Card image cap">
@@ -80,7 +81,7 @@
 <div class="card-deck">
   <div class="card other ">
     <div class="card-body text-center comming">
-      <h3 class="title">Upcoming Reads</h3>
+      <h3 class="card-heading">Upcoming Reads</h3>
       <ul>
         {{#each bookTable}}
           {{#unless read_status}}
@@ -95,13 +96,13 @@
   </div>
   <div class="card other recommended">
     <div class="card-body text-center">
-      <h3 class= "title">Recommended For You</h3>
+      <h3 class= "card-heading">Recommended For You</h3>
       <p class="card-text">Some text inside the second card</p>
     </div>
   </div>
   <div class="card other">
     <div class="card-body text-center pastBooks">
-      <h3 class= "title">Read It Again</h3>
+      <h3 class= "card-heading">Read It Again</h3>
       <ul>
         {{#each bookTable}}
           {{#if read_status}}
