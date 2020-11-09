@@ -50,10 +50,6 @@ button.edit {
   float: left;
 }
 
-.navbar {
-  background-color: aqua;
-}
-
 .card {
   
     width: 12em;
@@ -373,6 +369,7 @@ body {
   color:white;
 }
 
+
 .smTitle{
 width: 50%;
 }
@@ -386,3 +383,8 @@ width: 50%;
     margin: 0 auto;
     padding: 8px;
 }
+
+.login-bg{
+  background-image: url(assets/login.png);
+}
+
