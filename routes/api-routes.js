@@ -6,7 +6,7 @@ module.exports = function(app){
   // All routes will go in here
   app.get("/api/books", function(req, res){
     db.bookTable.findAll({}) // curly brackets are for specific items/searches
-    .then(function(data){
+    .then(function(data){ // this sends back an array
       data.forEach(element => {
         console.log(element.dataValues)
         

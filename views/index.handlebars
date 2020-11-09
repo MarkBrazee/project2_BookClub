@@ -39,6 +39,7 @@
   </div>
 </nav>
 
+</div>
 
 {{!-- search results --}}
 <div id="searchRes" class="container">
@@ -125,8 +126,23 @@
 
 
 {{!-- footer --}}
-<footer class = "footer col-12"> 
-<p>book club</p>
+<footer class = "footer"> 
+<div class="chat-page">
+            <div id="message-container"></div>
+            <form id="send-container">
+                <input type="text" id="message-input" placeholder="Chat Text Here">
+                <button type="submit" class="btn btn-success" id="send-button">Send</button>
+            </form>
+        </div>
+    
+    <div class="login-page window col-12">
+        <div id="form">
+            <h3 class="title text-center">What's your name?</h3>
+            <input class="username text-center" type="text" maxlength="14" />
+            <input type="submit" class="btn btn-primary submit" value="submit"></input>
+            
+        </div>
+    </div>
 </footer>
 
 
@@ -135,5 +151,4 @@
 
 
 
-</div>
 

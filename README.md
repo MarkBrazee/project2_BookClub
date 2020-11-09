@@ -11,7 +11,6 @@ Search for books using an api, add those books to a database of books you want t
 Application is hosted on heroku at https://lit-savannah-78060.herokuapp.com/
 
 
-
 ### Usage:
 Select the Heroku link listed in the Installation section, above. In the Shelf Indulgence browser page, the user may view what the website authors are currently reading, upcoming reads, recommendations for the viewer and a Read It Again section. In addition, the user may search for a book, join the book club and join a chat to discuss a book.
 
