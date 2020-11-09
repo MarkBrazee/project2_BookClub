@@ -163,13 +163,15 @@ body {
 
 #message-container{
   height: 269px;
-    background-color: #000;
-    width: 100%;
-    font-weight: 600;
-    /* position: fixed; */
-    overflow: auto;
-    margin-top: 0%;
-    border-radius: 0%;
+  background-color: #323b40;
+  width: 100%;
+  font-weight: 600;
+  /* position: fixed; */
+  overflow: auto;
+  margin-top: 0%;
+  border: 5px solid #dfe3e5;
+  border-bottom: none;
+  border-radius: 5px;
 }
 
 .chat-page{
@@ -207,26 +209,33 @@ body {
 }
 
 #send-container{
-  width: 100%;
+  
+    width: 100%;
     display: block;
     margin: 0px auto;
     margin-bottom: 0px;
-    background: #000;
+    background: #323b40;
     padding-top: 21px;
+    border: 5px solid #dfe3e5;
+    /* border-top: 5px solid #dfe3e5; */
+    border-radius: 5px;
 }
 
 .login-page{
-  background-color: #000;
-  height: 100%;
-  color: white;
-  padding-top: 8%;
-  width: 100%;
-  display: block;
-  margin-top: 10%;
-  padding-bottom: 10%;
-  margin-left: auto;
-  margin-right: auto;
+  
+    background-color: #323b40;
+    height: 100%;
+    color: #dce0e3;
+    padding-top: 8%;
+    width: 100%;
+    display: block;
+    margin-top: 10%;
+    padding-bottom: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 5px solid #dce0e3;
 }
+
 
 .username{
   width: 50%;
