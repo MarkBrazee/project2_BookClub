@@ -120,7 +120,7 @@ button.edit {
   padding-top: 40px;
   text-align: center;
 
-
+  
 }
 
 /* bottom 3 cards */
@@ -153,12 +153,12 @@ body {
 
 .btn-primary:hover{
   background-color: #B1C9B9;
-
-
+  
 }
 
 .btn-primary:active{
   background-color: #487D58;
+  
 }
 
 #message-container{
@@ -171,13 +171,13 @@ body {
   margin-top: 0%;
   border: 5px solid #dfe3e5;
   border-bottom: none;
-  border-radius: 5px;
+
 }
 
 .chat-page{
   background-color: #000;
-    /* height: 337px; */
-    color: white;
+  /* height: 337px; */
+    color: #dce0e3;
     /* padding-top: 6%; */
     width: 100%;
     display: block;
@@ -191,39 +191,50 @@ body {
   height: 51px;
   display: block;
   margin: 0 auto;
-  border-radius: 6px;
+  
   background: #212529;
   border: none;
-  color: white;
+  color: #dce0e3;
   padding-left: 14px;
 }
 
 #send-button{
   margin: 13px;
-  background-color: #4CAF50;
+  background-color: #6C7C69;
   height: 46px;
   font-size: 20px;
   font-weight: 500;
-  color: white;
+  color: #dce0e3;
   width: 27%;
 }
 
+.btn-success {
+  color: #dce0e3;
+  background-color: #6C7C69;
+  border-color: #6C7C69;
+}
+
+.btn-success:hover {
+  
+  background-color: #6C7C69;
+  border-color: #6C7C69;
+}
+
+
 #send-container{
   
-    width: 100%;
+  width: 100%;
     display: block;
     margin: 0px auto;
     margin-bottom: 0px;
     background: #323b40;
     padding-top: 21px;
     border: 5px solid #dfe3e5;
-    /* border-top: 5px solid #dfe3e5; */
-    border-radius: 5px;
 }
 
 .login-page{
   
-    background-color: #323b40;
+  background-color: #323b40;
     height: 100%;
     color: #dce0e3;
     padding-top: 8%;
@@ -234,27 +245,35 @@ body {
     margin-left: auto;
     margin-right: auto;
     border: 5px solid #dce0e3;
-}
+  }
 
+  .chat-title{
+  color: #dce0e3;
+}
 
 .username{
   width: 50%;
-  height: 49px;
-  background-color: #000;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  border-bottom: 2px solid white;
-  display: block;
-  margin: 0 auto;
-  color: white;
-  font-size: 24px;
+    height: 49px;
+    background-color: #323b40;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid #dce0e3;
+    display: block;
+    margin: 0 auto;
+    color: #dce0e3;
+    font-size: 24px;
 }
 
-.submit{
+.btn-primary{
   display: block;
   margin: 0 auto;
   margin-top: 25px;
+  width: 10%;
+    /* height: 26% !important; */
+    font-size: 22px;
+    font-weight: 500;
+    padding: 10px;
 }
 
 .coverPic{
@@ -265,16 +284,16 @@ body {
 }
 
 .user-disconnected, .user-connected{
-  color: #FFF;
+  color: #dce0e3;
   margin: 9px;
   width: 97%;
 }
 
 .received-message{
-  max-width: 48%;
+  max-width: 38%;
   margin: 13px;
-  background-color: #4CAF50;
-  color: white;
+  background-color: #46a6d1;
+  color: #dce0e3;
   border-radius: 8px;
   padding: 8px;
   animation-duration: 0.5s;
@@ -282,20 +301,20 @@ body {
 }
 
 .newMessage{
-  max-width: 50%;
-  margin: 9px;
-  color: #fff;
-  background: #007bff;
-  border-radius: 8px;
-  padding: 8px;
-  margin-left: 45%;
-  /* font-family: 'Roboto', sans-serif; */
-  animation-duration: 0.5s;
-  animation-name: slidein;
-}
+  max-width: 38%;
+    margin: 9px;
+    color: #dce0e3;
+    background: #dc9c3e;
+    border-radius: 8px;
+    padding: 8px;
+    margin-left: 59%;
+    /* font-family: 'Roboto', sans-serif; */
+    animation-duration: 0.5s;
+    animation-name: slidein;
+  }
 
 
-@keyframes slidein {
+  @keyframes slidein {
   from {
     margin-left: 0%;
     width: 300%; 
@@ -319,43 +338,51 @@ body {
   }
 }
 
- @media only screen and (max-width: 600px) {
+@media only screen and (max-width: 600px) {
   #message-container{
       height: 80%;
-}
+    }
 }
 
 @media (min-width: 601px) and (max-width: 850px){
   #message-container{
-      height: 61%;
+    height: 61%;
 }
 }
 
 
-/* titles/text styling */
 .title{
   font-family: 'Berkshire Swash', cursive;
   color: #323B40 ;
 }
-
 .smTitle {
   font-family:'Eagle Lake', cursive;
   font-weight: bold;
   color: #323B40;
 }
-
 .card-text {
   font-family: 'Inknut Antiqua', serif;
   color: #323B40
 }
-
 .nav{
   font-family: 'Eagle Lake', cursive;
   font-weight: bold;
   color: #323B40
 }
-
 .btn-primary{
   color:white;
 }
 
+.smTitle{
+width: 50%;
+}
+
+#bookSearch{
+  background: #323B40;
+    width: 100px;
+    color: white;
+    display: block;
+    border: 2px solid #323B40;
+    margin: 0 auto;
+    padding: 8px;
+}
