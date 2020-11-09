@@ -32,6 +32,7 @@ app.get('/', (req, res) => {
     res.sendFile(__dirname + '/public');
 });
 
+
 let exphbs = require("express-handlebars");
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
@@ -75,7 +76,7 @@ io.on("connection", socket => {
 // Syncing our sequelize models and then starting our Express app
 // =============================================================
 db.sequelize.sync({ force: true }).then(function () {
-    app.listen(PORT, function () {
+    server.listen(PORT, function () {
         console.log("App listening on PORT " + PORT);
     });
 });
