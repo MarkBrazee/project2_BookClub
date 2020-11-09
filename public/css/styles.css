@@ -352,16 +352,17 @@ body {
   color: #323B40 ;
 }
 .smTitle {
-  font-family:'Eagle Lake', cursive;
+  font-family: 'Inknut Antiqua', serif;
   font-weight: bold;
   color: #323B40;
+  width: 50%;
 }
 .card-text {
   font-family: 'Inknut Antiqua', serif;
   color: #323B40
 }
 .nav{
-  font-family: 'Eagle Lake', cursive;
+  font-family: 'Inknut Antiqua', serif;
   font-weight: bold;
   color: #323B40
 }
@@ -369,10 +370,6 @@ body {
   color:white;
 }
 
-
-.smTitle{
-width: 50%;
-}
 
 #bookSearch{
   background: #323B40;
@@ -382,9 +379,5 @@ width: 50%;
     border: 2px solid #323B40;
     margin: 0 auto;
     padding: 8px;
-}
-
-.login-bg{
-  background-image: url(assets/login.png);
 }
 
