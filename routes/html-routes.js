@@ -1,4 +1,4 @@
-const isAuthenticated = require("../../../atHome/testLogin/config/middleware/isAuthenticated");
+const isAuthenticated = require("../config/middleware/isAuthenticated");
 let db = require("../models")
 
 var path = require("path");
