@@ -90,7 +90,7 @@ button.edit {
   
 }
 
-.card:active{
+.book-searched:active{
   transform:scale(0.95);
 }
 
@@ -346,26 +346,30 @@ body {
 }
 }
 
-
 .title{
   font-family: 'Berkshire Swash', cursive;
+
   color: #323B40 ;
 }
+
+
 .smTitle {
-  font-family: 'Inknut Antiqua', serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: bold;
   color: #323B40;
   width: 50%;
 }
 .card-text {
-  font-family: 'Inknut Antiqua', serif;
+  font-family: 'Montserrat', sans-serif;
   color: #323B40
 }
+
 .nav{
-  font-family: 'Inknut Antiqua', serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: bold;
   color: #323B40
 }
+
 .btn-primary{
   color:white;
 }
@@ -379,5 +383,9 @@ body {
     border: 2px solid #323B40;
     margin: 0 auto;
     padding: 8px;
+}
+
+.card-heading{
+  font-family: 'Montserrat', sans-serif;
 }
 

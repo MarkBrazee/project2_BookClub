@@ -24,7 +24,7 @@ $(document).ready(function(){
 
       response.items.forEach(element => {
 
-        searchedBook = $("<div>").addClass("card")
+        searchedBook = $("<div>").addClass("card book-searched")
 
         title = $("<h5>").text(element.volumeInfo.title).addClass("nonDisplay")
         authors = $("<p>").text(element.volumeInfo.authors[0]).addClass("nonDisplay")
