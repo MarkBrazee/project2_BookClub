@@ -421,3 +421,8 @@ button.submit {
     height: 61%;
   }
 }
+
+.chat-head{
+  text-align: center;
+  font-family: 'Merriweather', serif;
+}
