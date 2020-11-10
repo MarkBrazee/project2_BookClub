@@ -157,13 +157,13 @@ body {
   box-shadow: 0 0px 8px 0 #696D7F;
 }
 
+/* Buy button in currently reading */
 .buy{
   width: 50%;
   position: absolute;
   bottom: 28px;
   left: 76px;
 }
-
 
 /* bottom 3 cards */
 .other{
@@ -221,7 +221,6 @@ button.edit {
 }
 
 /* Button Styles */
-
 .btn-primary{
   background-color: #6C7C69;
   border: #6C7C69;
@@ -421,4 +420,9 @@ button.submit {
   #message-container{
     height: 61%;
   }
+}
+
+.chat-head{
+  text-align: center;
+  font-family: 'Merriweather', serif;
 }
