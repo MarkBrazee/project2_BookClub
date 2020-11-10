@@ -100,18 +100,23 @@ $(document).ready(function(){
   
   $(".chat-page").hide();
 
-  $(".submit").click(function () {
-
-    const name = $(".username").val();
-    $(".login-page").hide();
-    $(".chat-page").show();
-    userConnected("You have joined");
-    socket.emit("new-user", name);
-
+  
+  $(".submit").on("click", function (event) {
+      const name = $(".username").val();
+      $(".login-page").hide();
+      $(".chat-page").show();
+      userConnected("You have joined");
+      socket.emit("new-user", name);
+  
     socket.on("user-connected", name => {
-      userConnected(`${name} connected`);
-    });
+        userConnected(`${name} connected`);
+      });
   });
+  $(".username").keypress(function(e){
+    if (e.which == 13){
+      $(".submit").click()
+    }
+  })
 
   socket.on("chat-message", data => {
     messagedReceived(`${data.name}: ${data.message}`);
