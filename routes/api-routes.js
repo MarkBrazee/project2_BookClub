@@ -1,36 +1,20 @@
 const db = require("../models");
 const passport = require("../config/passport");
 
-module.exports = function(app){
+module.exports = (app)=>{
 
   // All routes will go in here
-  app.get("/api/books", function(req, res){
-    db.bookTable.findAll({}) // curly brackets are for specific items/searches
-    .then(function(data){ // this sends back an array
-      data.forEach(element => {
-        console.log(element.dataValues)
-        
-      });
-      res.json(data)
-    });
-  });
+  app.get("/api/books", (req, res)=>{db.bookTable.findAll({}).then((data)=>res.json(data))});
 
-  app.post("/api/books", function(req, res){
+  app.post("/api/books", (req, res)=>{
     db.bookTable.create({
       book_title: req.body.book_title, author_name: req.body.author_name, book_cover: req.body.book_cover
-    }, (result)=>{
-      res.json({id: result.insertID})
-    }) // On front end make sure that we have an object with the same structure as our model
-    .then(function(data){
-      res.json(data)
-    });
+    }, (result)=>{res.json({id: result.insertID})}).then((data)=>res.json(data));
   });
 
-  app.post("/api/login", passport.authenticate("local"), function(req, res){
-    res.json(req.user);
-  });
+  app.post("/api/login", passport.authenticate("local"), (req, res)=>res.json(req.user));
 
-  app.post("/api/signup", function(req, res){
+  app.post("/api/signup", (req, res)=>{
     db.User.create({
       email: req.body.email,
       password: req.body.password
@@ -59,16 +43,14 @@ module.exports = function(app){
     }
   });
 
-  app.put("/api/books/:id", function(req,res){
+  app.put("/api/books/:id", (req,res)=>{
     db.bookTable.update({
       read_status: req.body.read_status
     }, {
       where: {
         id: req.params.id
       }
-    }, (result)=>{
-      res.json(result)
-    })
+    }, (result)=>res.json(result))
   })
 
   app.delete("/api/books/:id", (req,res)=>{
@@ -76,8 +58,6 @@ module.exports = function(app){
       where: {
         id: req.params.id
       }
-    }).then((data)=>{
-      res.json(data)
-    })
+    }).then((data)=>res.json(data))
   })
 };

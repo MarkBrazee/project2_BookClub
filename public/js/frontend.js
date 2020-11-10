@@ -43,10 +43,7 @@ $(document).ready(function () {
 
         $("#searchRes").append(searchedBook)
 
-
         $(searchedBook).on("click", (event) => {
-          console.log("click")
-          console.log(event.currentTarget.children[1].children[0].innerText)
           let newClickedBook = {
             book_title: event.currentTarget.children[1].children[0].innerText,
             author_name: event.currentTarget.children[1].children[1].innerText,
