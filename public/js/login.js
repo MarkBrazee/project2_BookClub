@@ -1,4 +1,3 @@
-$(document).ready(function(){
 var loginForm = $("form.login");
 var emailInput = $("input#email-input");
 var passwordInput = $("input#password-input");
@@ -30,4 +29,3 @@ function loginUser(email, password){
     console.log(err);
   });
 }
-});
