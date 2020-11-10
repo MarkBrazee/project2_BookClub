@@ -11,7 +11,7 @@
 {{!-- navigation bar --}}
 <div class="back">
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand nav" href="./index.handlebars">Shelf Indulgence</a>
+    <a class="navbar-brand nav navLogo" href="./index.handlebars">Shelf Indulgence</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -45,30 +45,30 @@
 
 {{!-- currently reading section --}}
 <div class="container currentRead currentRead">
-  <h1 class="card-heading">Currently Reading</h1>
+  <h1 class="card-heading currently-reading">Currently Reading</h1>
   <div class="card-deck">
     <div class="card current">
-      <img class="card-img-top" src="..." alt="Card image cap">
+      <img class="card-img-top reading" src="/assets/img/tailoftwocities.jpg" alt="Card image cap">
       <div class="card-body text-center">
-        <h5 class="card-title book-title smTitle">Book Title</h5>
+        <h5 class="card-title book-title smTitle">Tail of Two Cities</h5>
         <p class="card-text">book 1 details</p>
-        <a href="#" class="btn btn-primary smTitle">BUY</a>
+        <a href="#" class="btn btn-primary buy">BUY</a>
       </div>
     </div>
     <div class="card current">
-      <img class="card-img-top" src="..." alt="Card image cap">
+      <img class="card-img-top reading" src="/assets/img/oneflew.jpg" alt="Card image cap">
       <div class="card-body text-center">
-        <h5 class="card-title book-title smTitle">Book Title</h5>
+        <h5 class="card-title book-title smTitle">One Flew Over The Cuckoos Nest</h5>
         <p class="card-text">book 1 details</p>
-        <a href="#" class="btn btn-primary smTitle">BUY</a>
+        <a href="#" class="btn btn-primary buy">BUY</a>
       </div>
     </div>
     <div class="card current">
-      <img class="card-img-top" src="..." alt="Card image cap">
+      <img class="card-img-top reading" src="/assets/img/davinci.jpg" alt="Card image cap">
       <div class="card-body text-center">
-        <h5 class="card-title book-title smTitle smTitle">Book Title</h5>
+        <h5 class="card-title book-title smTitle smTitle">The DaVinci Code</h5>
         <p class="card-text">book 1 details</p>
-        <a href="#" class="btn btn-primary smTitle">BUY</a>
+        <a href="#" class="btn btn-primary buy">BUY</a>
       </div>
     </div>
   </div>
@@ -83,6 +83,7 @@
   <div class="card other ">
     <div class="card-body text-center comming">
       <h3 class="card-heading">Upcoming Reads</h3>
+      
       <ul>
         {{#each bookTable}}
         {{#unless read_status}}
