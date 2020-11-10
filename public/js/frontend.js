@@ -66,11 +66,11 @@ $(document).ready(function () {
   });
 
   $("#searchRes").hide();
-  $(".btn-danger").hide();
+  $("#closeSearch").hide();
 
-  $(".btn-danger").on("click", function () {
+  $("#closeSearch").on("click", function () {
     $("#searchRes").hide();
-    $(".btn-danger").hide();
+    $("#closeSearch").hide();
   });
 
   $(".read-me").on("click", (event2) => {
