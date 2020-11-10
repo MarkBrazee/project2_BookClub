@@ -1,78 +1,75 @@
-
-{{!-- page title --}}
+  {{!-- page title --}}
 <header class="top logo">
   <div class="jumbotron jumbotron-fluid">
-  <div class="container">
-    <h1 class="title text-center display-4">Shelf Indulgence</h1>
+    <div class="container">
+      <h1 class="title text-center display-4">SHELF INDULGENCE</h1>
+      <img class="book-logo" src="/assets/img/logo.png">
+    </div>
   </div>
-</div>
 </header>
 
 
 {{!-- navigation bar --}}
 <div class="back">
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand nav" href="#">Welcome <span class="member-name"></span></a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand nav navLogo" href="./index.handlebars">Shelf Indulgence</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link nav" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link nav" href="#">Join</a>
-      </li>
-       <li class="nav-item">
-        <a class="nav-link nav" href="#">Chat</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/logout">Logout</a>
-      </li>
-    </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input id="searchTerms" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button id="bookSearch" class="btn btn-outline-success my-2 my-sm-0 nav" type="submit">Search</button>
-    </form>
-  </div>
-</nav>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link nav" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav" href="#login-page">Chat</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/logout">Logout</a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input id="searchTerms" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button id="bookSearch" class="btn btn-outline-success my-2 my-sm-0 nav" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
 
 </div>
 
 {{!-- search results --}}
-<div id="searchRes" class="container">
-</div>
+
+<button type="button" class=" float-right btn btn-danger">close</button>
+<div id="searchRes" class="container books-searched"></div>
+
 
 
 
 {{!-- currently reading section --}}
 <div class="container currentRead currentRead">
-  <h1 class= "title">Currently Reading</h1>
+  <h1 class="card-heading currently-reading">Currently Reading</h1>
   <div class="card-deck">
     <div class="card current">
-        <img class="card-img-top" src="..." alt="Card image cap">
+      <img class="card-img-top reading" src="/assets/img/tailoftwocities.jpg" alt="Card image cap">
       <div class="card-body text-center">
-        <h5 class="card-title book-title smTitle">Book Title</h5>
-        <p class="card-text">book 1 details</p>
-        <a href="#" class="btn btn-primary smTitle">BUY</a>
-      </div>
-    </div>
-  <div class="card current">
-        <img class="card-img-top" src="..." alt="Card image cap">
-      <div class="card-body text-center">
-        <h5 class="card-title book-title smTitle">Book Title</h5>
-        <p class="card-text">book 1 details</p>
-        <a href="#" class="btn btn-primary smTitle">BUY</a>
+        <h5 class="card-title book-title smTitle">Tail of Two Cities</h5>
+        <a href="#" class="btn btn-primary buy">BUY</a>
       </div>
     </div>
     <div class="card current">
-        <img class="card-img-top" src="..." alt="Card image cap">
+      <img class="card-img-top reading" src="/assets/img/oneflew.jpg" alt="Card image cap">
       <div class="card-body text-center">
-        <h5 class="card-title book-title smTitle smTitle">Book Title</h5>
-        <p class="card-text">book 1 details</p>
-        <a href="#" class="btn btn-primary smTitle">BUY</a>
+        <h5 class="card-title book-title smTitle">One Flew Over The Cuckoos Nest</h5>
+        <a href="#" class="btn btn-primary buy">BUY</a>
+      </div>
+    </div>
+    <div class="card current">
+      <img class="card-img-top reading" src="/assets/img/davinci.jpg" alt="Card image cap">
+      <div class="card-body text-center">
+        <h5 class="card-title book-title smTitle smTitle">The DaVinci Code</h5>
+        <a href="#" class="btn btn-primary buy">BUY</a>
       </div>
     </div>
   </div>
@@ -86,36 +83,38 @@
 <div class="card-deck">
   <div class="card other ">
     <div class="card-body text-center comming">
-      <h3 class="title">Upcoming Reads</h3>
+      <h3 class="card-heading">Upcoming Reads</h3>
+      
       <ul>
         {{#each bookTable}}
-          {{#unless read_status}}
-            <div class="card-header">
-              {{this.book_title}}<button type="button" class="read-me btn btn-success" data-id="{{this.id}}">I read this</button>
-              <button type="button" class="delete-book btn btn-danger" data-id="{{this.id}}">remove</button>
-            </div>
-          {{/unless}}
+        {{#unless read_status}}
+        <div class="card-header">
+          {{this.book_title}}<button type="button" class="read-me btn btn-success" data-id="{{this.id}}">I read
+            this</button>
+          <button type="button" class="delete-book btn btn-danger" data-id="{{this.id}}">remove</button>
+        </div>
+        {{/unless}}
         {{/each}}
       </ul>
     </div>
   </div>
   <div class="card other recommended">
     <div class="card-body text-center">
-      <h3 class= "title">Recommended For You</h3>
+      <h3 class="card-heading">Recommended For You</h3>
       <p class="card-text">Some text inside the second card</p>
     </div>
   </div>
   <div class="card other">
     <div class="card-body text-center pastBooks">
-      <h3 class= "title">Read It Again</h3>
+      <h3 class="card-heading">Read It Again</h3>
       <ul>
         {{#each bookTable}}
-          {{#if read_status}}
-            <div class="card-header">
-              {{this.book_title}}
-              <button type="button" class="delete-book btn btn-danger" data-id="{{this.id}}">remove</button>
-            </div>
-          {{/if}}
+        {{#if read_status}}
+        <div class="card-header">
+          {{this.book_title}}
+          <button type="button" class="delete-book btn btn-danger" data-id="{{this.id}}">remove</button>
+        </div>
+        {{/if}}
         {{/each}}
       </ul>
     </div>
@@ -124,23 +123,24 @@
 
 
 {{!-- chat --}}
-<footer class = "footer"> 
-<div class="chat-page">
-            <div id="message-container"></div>
-            <form id="send-container">
-                <input type="text" id="message-input" placeholder="Chat Text Here">
-                <button type="submit" class="btn btn-success" id="send-button">Send</button>
-            </form>
-        </div>
-    
-    <div class="login-page window col-12">
-        <div id="form">
-            <h3 class="title text-center">What's your name?</h3>
-            <input class="username text-center" type="text" maxlength="14" />
-            <input type="submit" class="btn btn-primary submit" value="submit"></input>
-            
-        </div>
+<footer class="footer">
+  <div class="chat-page">
+    <div id="message-container"></div>
+    <form id="send-container">
+      <input type="text" id="message-input" placeholder="Chat Text Here">
+      <button type="submit" class="btn btn-success" id="send-button">Send</button>
+    </form>
+  </div>
+
+  <div class="login-page window col-12" id="login-page">
+    <div id="form">
+
+      <h3 class="chat-title text-center">What's your name?</h3>
+      <input class="username text-center" type="text" maxlength="14" />
+      <input type="submit" class="btn btn-primary submit submitChat" value="submit"></input>
+
     </div>
+  </div>
 </footer>
 
 </div>
