@@ -7,7 +7,6 @@ $(document).ready(function () {
   // Socket.io Dependency 
   var socket = io(); // For Production
   // var socket = io('http://localhost:8080/') // For Testing LocalHost Server
-  const messageContainer = document.getElementById("message-container");
 
   // Variables
   const messageContainer = document.getElementById("message-container");
