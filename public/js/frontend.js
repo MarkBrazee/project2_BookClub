@@ -73,12 +73,13 @@ $(document).ready(function () {
 
   // Hide the sections on page load
   $("#searchRes").hide();
-  $(".btn-danger").hide();
+  $("#closeSearch").hide();
+
 
   // Hide the sections when clcking the close button
   $(".btn-danger").on("click", function () {
     $("#searchRes").hide();
-    $(".btn-danger").hide();
+    $("#closeSearch").hide();
   });
 
   $(".read-me").on("click", (event2) => {

@@ -129,7 +129,7 @@ body {
 }
 
 /* Close button to close search window */
-.btn-danger{
+#searchClose {
   position: relative;
     margin-top: 20px;
     margin-bottom: 12px;
