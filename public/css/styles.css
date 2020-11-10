@@ -248,6 +248,12 @@ button.submit {
 
 /* Chat Page/Footer */
 /* Main Chat Area */
+.chat-head{
+  margin-top: 5%;
+  font-family: 'Merriweather', serif;
+  color: #6c7c69;
+}
+
 .chat-page{
   background-color: #000;
   color: #dce0e3;
