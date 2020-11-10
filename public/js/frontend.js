@@ -1,9 +1,5 @@
 $(document).ready(function () {
-<<<<<<< HEAD
   
-=======
-
->>>>>>> a8451e960e8af6971835fab97a68394270d9cfb1
   $.get("/api/user_data").then(function (data) {
     $(".member-name").text(data.email);
   });
@@ -11,10 +7,7 @@ $(document).ready(function () {
   // Socket.io Dependency 
   var socket = io(); // For Production
   // var socket = io('http://localhost:8080/') // For Testing LocalHost Server
-<<<<<<< HEAD
   const messageContainer = document.getElementById("message-container");
-=======
->>>>>>> a8451e960e8af6971835fab97a68394270d9cfb1
 
   // Variables
   const messageContainer = document.getElementById("message-container");
@@ -56,12 +49,8 @@ $(document).ready(function () {
         cardBody.append(authors);
 
         $("#searchRes").append(searchedBook);
-<<<<<<< HEAD
-
-=======
         
         // Click on a book to add to upcoming reads
->>>>>>> a8451e960e8af6971835fab97a68394270d9cfb1
         $(searchedBook).on("click", (event) => {
           let newClickedBook = {
             book_title: event.currentTarget.children[1].children[0].innerText,
@@ -87,13 +76,7 @@ $(document).ready(function () {
   $("#searchRes").hide();
   $("#closeSearch").hide();
 
-<<<<<<< HEAD
   $("#closeSearch").on("click", function () {
-=======
-
-  // Hide the sections when clcking the close button
-  $(".btn-danger").on("click", function () {
->>>>>>> a8451e960e8af6971835fab97a68394270d9cfb1
     $("#searchRes").hide();
     $("#closeSearch").hide();
   });
@@ -108,11 +91,7 @@ $(document).ready(function () {
     $.ajax(`api/books/${id}`, {
       type: "PUT",
       data: newReadState,
-<<<<<<< HEAD
     }).then(function () {});
-=======
-    }).then(function () { });
->>>>>>> a8451e960e8af6971835fab97a68394270d9cfb1
     location.reload();
   });
 
@@ -129,10 +108,7 @@ $(document).ready(function () {
   //Hide the chat page on page load
   $(".chat-page").hide();
 
-<<<<<<< HEAD
-=======
   // Enter a username and when click, show the chat page and hide the login page
->>>>>>> a8451e960e8af6971835fab97a68394270d9cfb1
   $(".submit").on("click", function (event) {
     const name = $(".username").val();
     $(".login-page").hide();
@@ -140,10 +116,7 @@ $(document).ready(function () {
     userConnected("You have joined");
     socket.emit("new-user", name);
 
-<<<<<<< HEAD
-=======
     // Show user connected to chat
->>>>>>> a8451e960e8af6971835fab97a68394270d9cfb1
     socket.on("user-connected", (name) => {
       userConnected(`${name} connected`);
     });
@@ -155,26 +128,17 @@ $(document).ready(function () {
     }
   });
 
-<<<<<<< HEAD
-=======
   // When a user sends a message, display the name of the user and the message
->>>>>>> a8451e960e8af6971835fab97a68394270d9cfb1
   socket.on("chat-message", (data) => {
     messagedReceived(`${data.name}: ${data.message}`);
   });
 
-<<<<<<< HEAD
-=======
   // When a user disconnects, display the name of the user that disconnected
->>>>>>> a8451e960e8af6971835fab97a68394270d9cfb1
   socket.on("user-disconnected", (name) => {
     userDisconnected(`${name} disconnected`);
   });
 
-<<<<<<< HEAD
-=======
   // Send a message to the chat area
->>>>>>> a8451e960e8af6971835fab97a68394270d9cfb1
   messageForm.addEventListener("submit", (error) => {
     error.preventDefault();
     const message = messageInput.value;
@@ -197,16 +161,8 @@ $(document).ready(function () {
   function userDisconnected(message) {
     let disconnectMessage = document.createElement("div");
     disconnectMessage.classList.add("user-disconnected", "text-center");
-<<<<<<< HEAD
-
-    disconnectMessage.innerText = message;
-
-    messageContainer.append(disconnectMessage);
-
-=======
     disconnectMessage.innerText = message;
     messageContainer.append(disconnectMessage);
->>>>>>> a8451e960e8af6971835fab97a68394270d9cfb1
     var objDiv = document.getElementById("message-container");
     objDiv.scrollTop = objDiv.scrollHeight;
   }
@@ -215,16 +171,8 @@ $(document).ready(function () {
   function messagedReceived(message) {
     let receivedMessage = document.createElement("div");
     receivedMessage.classList.add("received-message");
-<<<<<<< HEAD
-
-    receivedMessage.innerText = message;
-
-    messageContainer.append(receivedMessage);
-
-=======
     receivedMessage.innerText = message;
     messageContainer.append(receivedMessage);
->>>>>>> a8451e960e8af6971835fab97a68394270d9cfb1
     var objDiv = document.getElementById("message-container");
     objDiv.scrollTop = objDiv.scrollHeight;
   }
@@ -233,16 +181,8 @@ $(document).ready(function () {
   function userConnected(message) {
     let connectMessage = document.createElement("div");
     connectMessage.classList.add("user-connected", "text-center");
-<<<<<<< HEAD
-
-    connectMessage.innerText = message;
-
-    messageContainer.append(connectMessage);
-
-=======
     connectMessage.innerText = message;
     messageContainer.append(connectMessage);
->>>>>>> a8451e960e8af6971835fab97a68394270d9cfb1
     var objDiv = document.getElementById("message-container");
     objDiv.scrollTop = objDiv.scrollHeight;
   }

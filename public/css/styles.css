@@ -157,10 +157,7 @@ body {
   box-shadow: 0 0px 8px 0 #696D7F;
 }
 
-<<<<<<< HEAD
-=======
 /* Buy button in currently reading */
->>>>>>> a8451e960e8af6971835fab97a68394270d9cfb1
 .buy{
   width: 50%;
   position: absolute;
@@ -168,10 +165,6 @@ body {
   left: 76px;
 }
 
-<<<<<<< HEAD
-
-=======
->>>>>>> a8451e960e8af6971835fab97a68394270d9cfb1
 /* bottom 3 cards */
 .other{
   background-color: #DEFCE7;
@@ -228,10 +221,6 @@ button.edit {
 }
 
 /* Button Styles */
-<<<<<<< HEAD
-
-=======
->>>>>>> a8451e960e8af6971835fab97a68394270d9cfb1
 .btn-primary{
   background-color: #6C7C69;
   border: #6C7C69;
