@@ -115,7 +115,15 @@ button.edit {
 }
 
 .card-deck{
-  margin: 0 !important;
+  margin: 0 2% !important;
+}
+
+.card-deck .card {
+  border-radius: 15px;
+    border: 6px solid #eee;
+  margin-right: auto;
+  
+  height: 500px;
 }
 
 .display {
@@ -125,9 +133,10 @@ button.edit {
 /* book cards in the current section */
 .current{
   background-color: #DEFCE7;
-  margin: 20px;
-  margin-left: 50px;
+  /* margin: 20px; */
+  /* margin-left: 50px; */
   box-shadow: 0 8px 16px 0 #696D7F;
+  /* max-width: 25%; */
 }
 
 /* main card of current section */
@@ -257,7 +266,7 @@ body {
     padding-top: 8%;
     width: 100%;
     display: block;
-    margin-top: 10%;
+    margin-top: 4%;
     padding-bottom: 10%;
     margin-left: auto;
     margin-right: auto;
@@ -369,8 +378,10 @@ body {
 
 .title{
   font-family: 'Playfair Display SC', serif;
-  color: #6c7c69 ;
-  
+    color: #6c7c69;
+    float: left;
+    display: block;
+    margin: 0px 0px 0px 22%;
 }
 
 
@@ -383,7 +394,10 @@ body {
 
 
 .buy{
-  width: 50%
+  width: 50%;
+    position: absolute;
+    bottom: 28px;
+    left: 76px;
 }
 .card-text {
   font-family: 'Merriweather', serif;
@@ -415,9 +429,16 @@ body {
 }
 
 .reading{
-  width: auto;
+  /* width: auto; */
+  object-fit: cover;
+    max-height: 60%;
+    border-radius: 15px;
 }
 
+.book-logo{
+  width: 5%;
+  margin-left: 1%;
+}
 
 .navLogo, .nav-link, .currently-reading, h3{
   color: #6c7c69 !important;

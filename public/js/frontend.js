@@ -1,15 +1,9 @@
-$(document).ready(function(){
-  $("#searchRes").hide();
-  $(".btn-danger").hide()
-
-  $(".btn-danger").on("click", function(){
-    $("#searchRes").hide();
-    $(".btn-danger").hide();
-  })
-
+$(document).ready(function () {
   
 
-  $.get("/api/user_data").then(function(data){
+
+
+  $.get("/api/user_data").then(function (data) {
     $(".member-name").text(data.email);
   });
   var socket = io(); // For Production
@@ -33,7 +27,7 @@ $(document).ready(function(){
 
     $.ajax(settings).done(function (response) {
 
-      response.items.forEach(element => {        
+      response.items.forEach(element => {
         searchedBook = $("<div>").addClass("card book-searched")
 
         title = $("<h5>").text(element.volumeInfo.title).addClass("display")
@@ -46,7 +40,7 @@ $(document).ready(function(){
         searchedBook.append(cardBody)
         cardBody.append(title)
         cardBody.append(authors)
-        
+
         $("#searchRes").append(searchedBook)
 
 
@@ -73,6 +67,14 @@ $(document).ready(function(){
     $("#searchRes").empty();
   })
 
+  $("#searchRes").hide();
+  $(".btn-danger").hide()
+
+  $(".btn-danger").on("click", function () {
+    $("#searchRes").hide();
+    $(".btn-danger").hide();
+  })
+
   $(".read-me").on("click", (event2) => {
     console.log("click")
     let id = $(this).context.activeElement.dataset.id
@@ -97,23 +99,23 @@ $(document).ready(function(){
       location.reload()
     })
   })
-  
+
   $(".chat-page").hide();
 
-  
+
   $(".submit").on("click", function (event) {
-      const name = $(".username").val();
-      $(".login-page").hide();
-      $(".chat-page").show();
-      userConnected("You have joined");
-      socket.emit("new-user", name);
-  
+    const name = $(".username").val();
+    $(".login-page").hide();
+    $(".chat-page").show();
+    userConnected("You have joined");
+    socket.emit("new-user", name);
+
     socket.on("user-connected", name => {
-        userConnected(`${name} connected`);
-      });
+      userConnected(`${name} connected`);
+    });
   });
-  $(".username").keypress(function(e){
-    if (e.which == 13){
+  $(".username").keypress(function (e) {
+    if (e.which == 13) {
       $(".submit").click()
     }
   })
@@ -182,6 +184,6 @@ $(document).ready(function(){
     objDiv.scrollTop = objDiv.scrollHeight;
   }
 
-  
+
 
 })
