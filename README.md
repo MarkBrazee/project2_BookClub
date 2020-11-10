@@ -15,15 +15,16 @@ Application is hosted on heroku at https://lit-savannah-78060.herokuapp.com/
 Select the Heroku link listed in the Installation section, above. In the Shelf Indulgence browser page, the user may view what the website authors are currently reading, upcoming reads, recommendations for the viewer and a Read It Again section. In addition, the user may search for a book, join the book club and join a chat to discuss a book.
 
 #### Usage pics:
-![open](./public/assets/img/ShelfOpen.PNG)
+
+![open](./public/assets/img/ShelfLogin.gif)
 
 ##### Search:
 
-![search](./public/assets/img/ShelfSearch.gif)
+![search](./public/assets/img/ShelfSearch2.gif)
 
 ##### CRUD:
 
-![tableUsage](./public/assets/img/ShelfCRUD.gif)
+![tableUsage](./public/assets/img/ShelfCRUD2.gif)
 
 ##### Chat:
 
