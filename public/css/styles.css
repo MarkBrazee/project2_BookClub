@@ -1,98 +1,111 @@
-button.submit {
-  float: right;
+/* Global Styles */
+body {
+  background-image: url('../assets/bookStack.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+  font-family: 'Merriweather', serif;
 }
 
-.navbar-brand{
-  padding-left: 31px;
-}
+/* Header */
 .jumbotron{
   margin-bottom: 0;
   padding: 15px;
 }
 
-.card-header button.delete,
-button.edit {
-  float: right;
-  margin: 5px;
+/* The Logo next to SHELF INDULGENCE */
+.book-logo{
+  width: 5%;
+  margin-left: 1%;
 }
 
-.author-container {
-  margin-top: 50px;
+/* Logo Title 'SHELF INDULGENCE' */
+.title{
+  font-family: 'Playfair Display SC', serif;
+  color: #6c7c69;
+  float: left;
+  margin: 0px 0px 0px 22%;
 }
 
-.author-list {
-  margin-top: 25px;
-}
-
-.blog-container {
-  margin-top: 30px;
-}
-
-.blog {
-  margin-top: 30px;
-}
-
-.hidden {
-  display: none;
-}
-
-#author-name {
+/* The titles of the books in the currently reading section */
+.smTitle {
+  font-family: 'Merriweather', serif;
+  font-weight: bold;
+  color: #323B40;
   width: 100%;
-  height: 35px;
-  margin-top: 5px;
 }
 
-.top-30 {
-  margin-top: 30px;
+/* The image of the currently reading books  */
+.reading{
+  object-fit: cover;
+  max-height: 60%;
+  border-radius: 15px;
 }
 
+/* Navigation */
+.navLogo, .nav-link, .currently-reading, h3{
+  color: #6c7c69 !important;
+}
+
+.navbar-brand{
+  padding-left: 31px;
+}
+
+.nav{
+  font-family: 'Merriweather', serif;
+  font-weight: bold;
+  color: #6c7c69;
+}
+
+/* Search Results */
+/* The main box where the search results go into */
 #searchRes{
   width: 77%;
-    height: 415px;
-    overflow: auto;
-    border: 9px solid white;
-    /* margin-top: 2%; */
-    background: #323b40;
-   box-shadow: 0px 1px 3px #696969;
-    border-radius: 9px;
-    /* margin-top: 62px; */
-    display: block;
-    margin: 34px auto;
-
+  height: 415px;
+  overflow: auto;
+  border: 9px solid white;
+  background: #323b40;
+  box-shadow: 0px 1px 3px #696969;
+  border-radius: 9px;
+  display: block;
+  margin: 34px auto;
 }
 
-.btn-danger{
-  position: relative;
-    margin-top: 20px;
-    margin-bottom: 12px;
-    box-shadow: 0px 1px 3px #696969;
-    right: 186px;
-    top: 1px;
-}
-
+/* Hide scroll bar */
 #searchRes::-webkit-scrollbar{
   display:none;
 }
 
-.card {
-  
-    width: 12em;
-    box-shadow: 2px 2px 6px #696969;
-    margin: 25px;
-    float: left;
-    border-radius: 5%;
-  }
+/* h5 for searched books */
+.display {
+  font-weight: bold;
+}
 
+/* The search for book button */
+#bookSearch{
+  background: #323B40;
+  width: 100px;
+  color: white;
+  display: block;
+  border: 2px solid #323B40;
+  margin: 0 auto;
+  padding: 8px;
+}
 
+/* The picture of each book that is returned from the search */
 .coverPic {
   width: 100%;
-    height: 300px;
-    transition: .5s ease;
-    backface-visibility: hidden;
-    border-radius: 5%;
-    border: 6px solid #eee;
-    object-fit: cover;
+  height: 300px;
+  transition: .5s ease;
+  backface-visibility: hidden;
+  border-radius: 5%;
+  border: 6px solid #eee;
+  object-fit: cover;
 }
+
+/* The overlay which shows the Author and Book Title */
 .overlay{
   transition: .5s ease;
   opacity: 0;
@@ -115,8 +128,56 @@ button.edit {
   
 }
 
+/* Close button to close search window */
+#searchClose {
+  position: relative;
+    margin-top: 20px;
+    margin-bottom: 12px;
+    box-shadow: 0px 1px 3px #696969;
+    right: 186px;
+    top: 1px;
+}
+
+/* Click on a search book animation */
 .book-searched:active{
   transform:scale(0.95);
+}
+
+/* Currently Reading */
+/* Currently Heading Header */
+.currentRead {
+  padding-top: 40px;
+  text-align: center;
+  font-family: 'Merriweather', serif;
+}
+
+/* Currently Reading Cards */
+.current{
+  background-color: #DEFCE7;
+  box-shadow: 0 0px 8px 0 #696D7F;
+}
+
+.buy{
+  width: 50%;
+  position: absolute;
+  bottom: 28px;
+  left: 76px;
+}
+
+
+/* bottom 3 cards */
+.other{
+  background-color: #DEFCE7;
+  box-shadow: 0 0px 8px 0 #696D7F;
+}
+
+/* Card Styles */
+.card {
+  width: 12em;
+  box-shadow: 2px 2px 6px #696969;
+  margin: 25px;
+  float: left;
+  border-radius: 5%;
 }
 
 .card-deck{
@@ -125,32 +186,32 @@ button.edit {
 
 .card-deck .card {
   border-radius: 15px;
-    border: 6px solid #eee;
-  margin-right: auto;
-  
+  border: 6px solid #eee;
   height: 500px;
 }
 
-.display {
-  font-weight: bold;
+.card-header button.delete,
+button.edit {
+  float: right;
+  margin: 5px;
 }
+
+.card-text {
+  font-family: 'Merriweather', serif;
+  color: #323B40
+}
+
 
 /* book cards in the current section */
 .current{
   background-color: #DEFCE7;
-  /* margin: 20px; */
-  /* margin-left: 50px; */
   box-shadow: 0 0px 8px 0 #696D7F;
-
-  /* max-width: 25%; */
 }
 
 /* main card of current section */
 .currentRead {
   padding-top: 40px;
   text-align: center;
-
-  
 }
 
 /* bottom 3 cards */
@@ -159,77 +220,70 @@ button.edit {
   box-shadow: 0 0px 8px 0 #696D7F;
 }
 
-body {
-  background-image: url('../assets/bookStack.png');
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  width: 100%;
-  display: block;
-  margin: 0 auto;
-    font-family: 'Merriweather', serif;
-
-}
-
-/* search cards */
-/* .test{ 
-  width: 150px;
-  float: left;
-  width: 25%;
-  padding: 0 10px;
-} */
+/* Button Styles */
 
 .btn-primary{
   background-color: #6C7C69;
   border: #6C7C69;
+  color:white;
+  display: block;
+  margin: 0 auto;
+  margin-top: 25px;
+  width: 50%;
+  font-size: 22px;
+  font-weight: 500;
+  padding: 10px;
 }
 
 .btn-primary:hover{
   background-color: #B1C9B9;
-  
 }
 
 .btn-primary:active{
   background-color: #487D58;
-  
 }
 
+button.submit {
+  float: right;
+}
+
+/* Chat Page/Footer */
+/* Main Chat Area */
+.chat-page{
+  background-color: #000;
+  color: #dce0e3;
+  width: 100%;
+  display: block;
+  margin-top: 6%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* The container where the messages display */
 #message-container{
   height: 269px;
   background-color: #323b40;
   width: 100%;
   font-weight: 600;
-  /* position: fixed; */
   overflow: auto;
   margin-top: 0%;
   border: 5px solid #dfe3e5;
   border-bottom: none;
-
 }
 
-.chat-page{
-  background-color: #000;
-  /* height: 337px; */
-    color: #dce0e3;
-    /* padding-top: 6%; */
-    width: 100%;
-    display: block;
-    margin-top: 6%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
+/* The input box to add a message to send to chat */
 #message-input{
   width: 97%;
   height: 51px;
   display: block;
   margin: 0 auto;
-  
   background: #212529;
   border: none;
   color: #dce0e3;
   padding-left: 14px;
 }
 
+/* The Send Button */
 #send-button{
   margin: 13px;
   background-color: #6C7C69;
@@ -240,87 +294,73 @@ body {
   width: 27%;
 }
 
+/* Send button */
 .btn-success {
   color: #dce0e3;
   background-color: #6C7C69;
   border-color: #6C7C69;
 }
 
+/* Send Button on Hover */
 .btn-success:hover {
-  
   background-color: #6C7C69;
   border-color: #6C7C69;
 }
 
-
+/* The container for the Send button and input area */
 #send-container{
-  
   width: 100%;
-    display: block;
-    margin: 0px auto;
-    margin-bottom: 0px;
-    background: #323b40;
-    padding-top: 21px;
-    border: 5px solid #dfe3e5;
+  display: block;
+  margin: 0px auto;
+  margin-bottom: 0px;
+  background: #323b40;
+  padding-top: 21px;
+  border: 5px solid #dfe3e5;
 }
 
+/* The area where it asks your name to enter chat */
 .login-page{
-  
   background-color: #323b40;
-    height: 100%;
-    color: #dce0e3;
-    padding-top: 8%;
-    width: 100%;
-    display: block;
-    margin-top: 4%;
-    padding-bottom: 10%;
-    margin-left: auto;
-    margin-right: auto;
-    border: 5px solid #dce0e3;
+  height: 100%;
+  color: #dce0e3;
+  padding-top: 8%;
+  width: 100%;
+  display: block;
+  margin-top: 4%;
+  padding-bottom: 10%;
+  margin-left: auto;
+  margin-right: auto;
+  border: 5px solid #dce0e3;
   }
 
-  .chat-title{
+/* What is your name on login page */
+.chat-title{
   color: #dce0e3;
 }
 
+/* The input to add a username "What is your name?" value */
 .username{
   width: 50%;
-    height: 49px;
-    background-color: #323b40;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    border-bottom: 2px solid #dce0e3;
-    display: block;
-    margin: 0 auto;
-    color: #dce0e3;
-    font-size: 24px;
-}
-
-.btn-primary{
+  height: 49px;
+  background-color: #323b40;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 2px solid #dce0e3;
   display: block;
   margin: 0 auto;
-  margin-top: 25px;
-  width: 10%;
-    /* height: 26% !important; */
-    font-size: 22px;
-    font-weight: 500;
-    padding: 10px;
+  color: #dce0e3;
+  font-size: 24px;
 }
 
-/* .coverPic{
-  width: 100%;
-  transition: .5s ease;
-  backface-visibility: hidden;
-  height: 200px;
-} */
-
+/* Text when a user connected or disconnects to the chat */
 .user-disconnected, .user-connected{
   color: #dce0e3;
   margin: 9px;
   width: 97%;
 }
 
+/* The message that is received in the chat */
 .received-message{
   max-width: 38%;
   margin: 13px;
@@ -332,21 +372,21 @@ body {
   animation-name: slideout;
 }
 
+/* The message the user enters into the chat */
 .newMessage{
   max-width: 38%;
-    margin: 9px;
-    color: #dce0e3;
-    background: #dc9c3ed6;
-    border-radius: 8px;
-    padding: 8px;
-    margin-left: 59%;
-    /* font-family: 'Roboto', sans-serif; */
-    animation-duration: 0.5s;
-    animation-name: slidein;
-  }
+  margin: 9px;
+  color: #dce0e3;
+  background: #dc9c3ed6;
+  border-radius: 8px;
+  padding: 8px;
+  margin-left: 59%;
+  animation-duration: 0.5s;
+  animation-name: slidein;
+}
 
-
-  @keyframes slidein {
+/* Chat Animation - Slides the message into the message area*/
+@keyframes slidein {
   from {
     margin-left: 0%;
     width: 300%; 
@@ -370,6 +410,7 @@ body {
   }
 }
 
+/* Screen size Responsive */
 @media only screen and (max-width: 600px) {
   #message-container{
       height: 80%;
@@ -379,73 +420,5 @@ body {
 @media (min-width: 601px) and (max-width: 850px){
   #message-container{
     height: 61%;
-}
-}
-
-.title{
-  font-family: 'Playfair Display SC', serif;
-    color: #6c7c69;
-    float: left;
-    display: block;
-    margin: 0px 0px 0px 22%;
-}
-
-
-.smTitle {
-  font-family: 'Merriweather', serif;
-  font-weight: bold;
-  color: #323B40;
-  width: 100%;
-}
-
-
-.buy{
-  width: 50%;
-    position: absolute;
-    bottom: 28px;
-    left: 76px;
-}
-.card-text {
-  font-family: 'Merriweather', serif;
-  color: #323B40
-}
-
-.nav{
-  font-family: 'Merriweather', serif;
-  font-weight: bold;
-  color: #6c7c69;
-}
-
-.btn-primary{
-  color:white;
-}
-
-#bookSearch{
-  background: #323B40;
-    width: 100px;
-    color: white;
-    display: block;
-    border: 2px solid #323B40;
-    margin: 0 auto;
-    padding: 8px;
-}
-
-.card-heading{
-  font-family: 'Merriweather', serif;
-}
-
-.reading{
-  /* width: auto; */
-  object-fit: cover;
-    max-height: 60%;
-    border-radius: 15px;
-}
-
-.book-logo{
-  width: 5%;
-  margin-left: 1%;
-}
-
-.navLogo, .nav-link, .currently-reading, h3{
-  color: #6c7c69 !important;
+  }
 }
