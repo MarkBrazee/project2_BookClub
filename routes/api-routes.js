@@ -27,6 +27,7 @@ module.exports = function(app){
   });
 
   app.post("/api/login", passport.authenticate("local"), function(req, res){
+    console.log("line 30")
     res.json(req.user);
   });
 
@@ -36,6 +37,7 @@ module.exports = function(app){
       password: req.body.password
     })
     .then(function(){
+      console.log("Made it to line 39")
       res.redirect(307, "/api/login");
     })
     .catch(function(err){
