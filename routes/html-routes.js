@@ -3,20 +3,11 @@ let db = require("../models")
 
 var path = require("path");
 
-module.exports = function(app) {
+module.exports = (app)=>{
   
-  app.get("/books", function(req, res){
-    db.bookTable.findAll({raw: true}).then((DBGrab)=>{
-      // console.log(DBGrab)
-      // let hbsObject = {
-      //   bookTable: DBGrab
-      // }
-      // console.log(hbsObject)
-      res.render('home',{bookTable:DBGrab})
-    })
-  });
+  app.get("/books", (req, res)=>db.bookTable.findAll({raw: true}).then((DBGrab)=>res.render('index',{bookTable:DBGrab})));
 
-  app.get("/", function(req, res){
+  app.get("/", (req, res)=>{
     if(req.user){
       res.redirect("/books");
     }
@@ -24,7 +15,7 @@ module.exports = function(app) {
     res.render('index');
   });
 
-  app.get("/login", function(req, res){
+  app.get("/login", (req, res)=>{
     if(req.user){
       res.redirect("/books");
     }
@@ -32,7 +23,5 @@ module.exports = function(app) {
     res.render('login');
   });
 
-  app.get("/books", isAuthenticated, function(req, res){
-    res.render('home')
-  });
+  app.get("/books", isAuthenticated, (req, res)=>res.render("index"));
 };

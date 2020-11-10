@@ -1,6 +1,9 @@
-$(document).ready(function(){
+$(document).ready(function () {
+  
 
-  $.get("/api/user_data").then(function(data){
+
+
+  $.get("/api/user_data").then(function (data) {
     $(".member-name").text(data.email);
   });
   var socket = io(); // For Production
@@ -11,6 +14,8 @@ $(document).ready(function(){
   const messageInput = document.getElementById("message-input");
 
   $("#bookSearch").on("click", function (event) {
+    $("#searchRes").show();
+    $(".btn-danger").show()
     event.preventDefault();
     let searchTerm = $("#searchTerms").val()
     const settings = {
@@ -23,27 +28,25 @@ $(document).ready(function(){
     $.ajax(settings).done(function (response) {
 
       response.items.forEach(element => {
+        searchedBook = $("<div>").addClass("card book-searched")
 
-        searchedBook = $("<div>").addClass("card")
-
-        title = $("<h5>").text(element.volumeInfo.title).addClass("nonDisplay")
-        authors = $("<p>").text(element.volumeInfo.authors[0]).addClass("nonDisplay")
+        title = $("<h5>").text(element.volumeInfo.title).addClass("display")
+        authors = $("<p>").text(element.volumeInfo.authors[0]).addClass("display")
 
         coverPic = $("<img>").attr("src", element.volumeInfo.imageLinks.smallThumbnail)
         coverPic.attr("class", "coverPic card-img-top")
         searchedBook.append(coverPic)
         cardBody = $("<div>").addClass("overlay")
         searchedBook.append(cardBody)
-        searchedBook.append(title)
-        searchedBook.append(authors)
+        cardBody.append(title)
+        cardBody.append(authors)
 
         $("#searchRes").append(searchedBook)
+
         $(searchedBook).on("click", (event) => {
-          console.log("click")
-          console.log(event.currentTarget.children[2].innerText)
           let newClickedBook = {
-            book_title: event.currentTarget.children[2].innerText,
-            author_name: event.currentTarget.children[3].innerText,
+            book_title: event.currentTarget.children[1].children[0].innerText,
+            author_name: event.currentTarget.children[1].children[1].innerText,
             book_cover: event.currentTarget.children[0].src,
             read_status: false
           }
@@ -59,6 +62,14 @@ $(document).ready(function(){
     });
 
     $("#searchRes").empty();
+  })
+
+  $("#searchRes").hide();
+  $(".btn-danger").hide()
+
+  $(".btn-danger").on("click", function () {
+    $("#searchRes").hide();
+    $(".btn-danger").hide();
   })
 
   $(".read-me").on("click", (event2) => {
@@ -85,10 +96,11 @@ $(document).ready(function(){
       location.reload()
     })
   })
+
   $(".chat-page").hide();
 
-  $(".submit").click(function () {
 
+  $(".submit").on("click", function (event) {
     const name = $(".username").val();
     $(".login-page").hide();
     $(".chat-page").show();
@@ -99,6 +111,11 @@ $(document).ready(function(){
       userConnected(`${name} connected`);
     });
   });
+  $(".username").keypress(function (e) {
+    if (e.which == 13) {
+      $(".submit").click()
+    }
+  })
 
   socket.on("chat-message", data => {
     messagedReceived(`${data.name}: ${data.message}`);
@@ -163,5 +180,7 @@ $(document).ready(function(){
     var objDiv = document.getElementById("message-container");
     objDiv.scrollTop = objDiv.scrollHeight;
   }
+
+
 
 })

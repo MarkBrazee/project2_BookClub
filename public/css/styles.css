@@ -47,11 +47,31 @@ button.edit {
 }
 
 #searchRes{
-  float: left;
+  width: 77%;
+    height: 415px;
+    overflow: auto;
+    border: 9px solid white;
+    /* margin-top: 2%; */
+    background: #323b40;
+   box-shadow: 0px 1px 3px #696969;
+    border-radius: 9px;
+    /* margin-top: 62px; */
+    display: block;
+    margin: 34px auto;
+
 }
 
-.navbar {
-  background-color: aqua;
+.btn-danger{
+  position: relative;
+    margin-top: 20px;
+    margin-bottom: 12px;
+    box-shadow: 0px 1px 3px #696969;
+    right: 186px;
+    top: 1px;
+}
+
+#searchRes::-webkit-scrollbar{
+  display:none;
 }
 
 .card {
@@ -70,7 +90,8 @@ button.edit {
     transition: .5s ease;
     backface-visibility: hidden;
     border-radius: 5%;
-    border: 6px solid #eee
+    border: 6px solid #eee;
+    object-fit: cover;
 }
 .overlay{
   transition: .5s ease;
@@ -94,25 +115,34 @@ button.edit {
   
 }
 
-.card:active{
+.book-searched:active{
   transform:scale(0.95);
 }
 
 .card-deck{
-  margin: 0 !important;
+  margin: 0 2% !important;
 }
 
-.nonDisplay {
-  display: none;
+.card-deck .card {
+  border-radius: 15px;
+    border: 6px solid #eee;
+  margin-right: auto;
+  
+  height: 500px;
 }
 
+.display {
+  font-weight: bold;
+}
 
 /* book cards in the current section */
 .current{
   background-color: #DEFCE7;
-  margin: 20px;
-  margin-left: 50px;
-  box-shadow: 0 8px 16px 0 #696D7F;
+  /* margin: 20px; */
+  /* margin-left: 50px; */
+  box-shadow: 0 0px 8px 0 #696D7F;
+
+  /* max-width: 25%; */
 }
 
 /* main card of current section */
@@ -120,13 +150,13 @@ button.edit {
   padding-top: 40px;
   text-align: center;
 
-
+  
 }
 
 /* bottom 3 cards */
 .other{
   background-color: #DEFCE7;
-  box-shadow: 0 8px 16px 0 #696D7F;
+  box-shadow: 0 0px 8px 0 #696D7F;
 }
 
 body {
@@ -134,8 +164,10 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   width: 100%;
-    display: block;
-    margin: 0 auto;
+  display: block;
+  margin: 0 auto;
+    font-family: 'Merriweather', serif;
+
 }
 
 /* search cards */
@@ -153,29 +185,31 @@ body {
 
 .btn-primary:hover{
   background-color: #B1C9B9;
-
-
+  
 }
 
 .btn-primary:active{
   background-color: #487D58;
+  
 }
 
 #message-container{
   height: 269px;
-    background-color: #000;
-    width: 100%;
-    font-weight: 600;
-    /* position: fixed; */
-    overflow: auto;
-    margin-top: 0%;
-    border-radius: 0%;
+  background-color: #323b40;
+  width: 100%;
+  font-weight: 600;
+  /* position: fixed; */
+  overflow: auto;
+  margin-top: 0%;
+  border: 5px solid #dfe3e5;
+  border-bottom: none;
+
 }
 
 .chat-page{
   background-color: #000;
-    /* height: 337px; */
-    color: white;
+  /* height: 337px; */
+    color: #dce0e3;
     /* padding-top: 6%; */
     width: 100%;
     display: block;
@@ -189,83 +223,109 @@ body {
   height: 51px;
   display: block;
   margin: 0 auto;
-  border-radius: 6px;
+  
   background: #212529;
   border: none;
-  color: white;
+  color: #dce0e3;
   padding-left: 14px;
 }
 
 #send-button{
   margin: 13px;
-  background-color: #4CAF50;
+  background-color: #6C7C69;
   height: 46px;
   font-size: 20px;
   font-weight: 500;
-  color: white;
+  color: #dce0e3;
   width: 27%;
 }
 
+.btn-success {
+  color: #dce0e3;
+  background-color: #6C7C69;
+  border-color: #6C7C69;
+}
+
+.btn-success:hover {
+  
+  background-color: #6C7C69;
+  border-color: #6C7C69;
+}
+
+
 #send-container{
+  
   width: 100%;
     display: block;
     margin: 0px auto;
     margin-bottom: 0px;
-    background: #000;
+    background: #323b40;
     padding-top: 21px;
+    border: 5px solid #dfe3e5;
 }
 
 .login-page{
-  background-color: #000;
-  height: 100%;
-  color: white;
-  padding-top: 8%;
-  width: 100%;
-  display: block;
-  margin-top: 10%;
-  padding-bottom: 10%;
-  margin-left: auto;
-  margin-right: auto;
+  
+  background-color: #323b40;
+    height: 100%;
+    color: #dce0e3;
+    padding-top: 8%;
+    width: 100%;
+    display: block;
+    margin-top: 4%;
+    padding-bottom: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 5px solid #dce0e3;
+  }
+
+  .chat-title{
+  color: #dce0e3;
 }
 
 .username{
   width: 50%;
-  height: 49px;
-  background-color: #000;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  border-bottom: 2px solid white;
-  display: block;
-  margin: 0 auto;
-  color: white;
-  font-size: 24px;
+    height: 49px;
+    background-color: #323b40;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid #dce0e3;
+    display: block;
+    margin: 0 auto;
+    color: #dce0e3;
+    font-size: 24px;
 }
 
-.submit{
+.btn-primary{
   display: block;
   margin: 0 auto;
   margin-top: 25px;
+  width: 10%;
+    /* height: 26% !important; */
+    font-size: 22px;
+    font-weight: 500;
+    padding: 10px;
 }
 
-.coverPic{
+/* .coverPic{
   width: 100%;
   transition: .5s ease;
   backface-visibility: hidden;
   height: 200px;
-}
+} */
 
 .user-disconnected, .user-connected{
-  color: #FFF;
+  color: #dce0e3;
   margin: 9px;
   width: 97%;
 }
 
 .received-message{
-  max-width: 48%;
+  max-width: 38%;
   margin: 13px;
-  background-color: #4CAF50;
-  color: white;
+  background-color: #3a8aafc9;
+  color: #dce0e3;
   border-radius: 8px;
   padding: 8px;
   animation-duration: 0.5s;
@@ -273,20 +333,20 @@ body {
 }
 
 .newMessage{
-  max-width: 50%;
-  margin: 9px;
-  color: #fff;
-  background: #007bff;
-  border-radius: 8px;
-  padding: 8px;
-  margin-left: 45%;
-  /* font-family: 'Roboto', sans-serif; */
-  animation-duration: 0.5s;
-  animation-name: slidein;
-}
+  max-width: 38%;
+    margin: 9px;
+    color: #dce0e3;
+    background: #dc9c3ed6;
+    border-radius: 8px;
+    padding: 8px;
+    margin-left: 59%;
+    /* font-family: 'Roboto', sans-serif; */
+    animation-duration: 0.5s;
+    animation-name: slidein;
+  }
 
 
-@keyframes slidein {
+  @keyframes slidein {
   from {
     margin-left: 0%;
     width: 300%; 
@@ -310,43 +370,82 @@ body {
   }
 }
 
- @media only screen and (max-width: 600px) {
+@media only screen and (max-width: 600px) {
   #message-container{
       height: 80%;
-}
+    }
 }
 
 @media (min-width: 601px) and (max-width: 850px){
   #message-container{
-      height: 61%;
+    height: 61%;
 }
 }
 
-
-/* titles/text styling */
 .title{
-  font-family: 'Berkshire Swash', cursive;
-  color: #323B40 ;
+  font-family: 'Playfair Display SC', serif;
+    color: #6c7c69;
+    float: left;
+    display: block;
+    margin: 0px 0px 0px 22%;
 }
+
 
 .smTitle {
-  font-family:'Eagle Lake', cursive;
+  font-family: 'Merriweather', serif;
   font-weight: bold;
   color: #323B40;
+  width: 100%;
 }
 
+
+.buy{
+  width: 50%;
+    position: absolute;
+    bottom: 28px;
+    left: 76px;
+}
 .card-text {
-  font-family: 'Inknut Antiqua', serif;
+  font-family: 'Merriweather', serif;
   color: #323B40
 }
 
 .nav{
-  font-family: 'Eagle Lake', cursive;
+  font-family: 'Merriweather', serif;
   font-weight: bold;
-  color: #323B40
+  color: #6c7c69;
 }
 
 .btn-primary{
   color:white;
 }
 
+#bookSearch{
+  background: #323B40;
+    width: 100px;
+    color: white;
+    display: block;
+    border: 2px solid #323B40;
+    margin: 0 auto;
+    padding: 8px;
+}
+
+.card-heading{
+  font-family: 'Merriweather', serif;
+}
+
+.reading{
+  /* width: auto; */
+  object-fit: cover;
+    max-height: 60%;
+    border-radius: 15px;
+}
+
+.book-logo{
+  width: 5%;
+  margin-left: 1%;
+}
+
+.navLogo, .nav-link, .currently-reading, h3{
+  color: #6c7c69 !important;
+}
