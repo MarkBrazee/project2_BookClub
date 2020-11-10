@@ -46,10 +46,10 @@ $(document).ready(function () {
 
         $(searchedBook).on("click", (event) => {
           console.log("click")
-          console.log(event.currentTarget.children[2].innerText)
+          console.log(event.currentTarget.children[1].children[0].innerText)
           let newClickedBook = {
-            book_title: event.currentTarget.children[2].innerText,
-            author_name: event.currentTarget.children[3].innerText,
+            book_title: event.currentTarget.children[1].children[0].innerText,
+            author_name: event.currentTarget.children[1].children[1].innerText,
             book_cover: event.currentTarget.children[0].src,
             read_status: false
           }
