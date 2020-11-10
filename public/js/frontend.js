@@ -13,7 +13,7 @@ $(document).ready(function () {
   const messageForm = document.getElementById("send-container");
   const messageInput = document.getElementById("message-input");
 
-  // Search for books
+  // Search for books 
   $("#bookSearch").on("click", function (event) {
     $("#searchRes").show();
     $(".btn-danger").show();
