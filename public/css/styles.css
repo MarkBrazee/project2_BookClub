@@ -506,13 +506,6 @@ button.submit {
     border-bottom: none;
 }
 
-<<<<<<< HEAD
-.chat-head{
-  text-align: center;
-  font-family: 'Merriweather', serif;
-}
-
-=======
 .title{
     font-family: 'Playfair Display SC', serif;
     color: #6c7c69;
@@ -536,4 +529,3 @@ button.submit {
   margin: 44px auto;
 }
 }
->>>>>>> 97cb48a20baa635b2347f0b04f4c13694dd2ce34
