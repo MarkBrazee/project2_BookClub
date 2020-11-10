@@ -1,5 +1,5 @@
 $(document).ready(function () {
-
+  
   $.get("/api/user_data").then(function (data) {
     $(".member-name").text(data.email);
   });
@@ -75,9 +75,7 @@ $(document).ready(function () {
   $("#searchRes").hide();
   $("#closeSearch").hide();
 
-
-  // Hide the sections when clcking the close button
-  $(".btn-danger").on("click", function () {
+  $("#closeSearch").on("click", function () {
     $("#searchRes").hide();
     $("#closeSearch").hide();
   });
@@ -92,7 +90,7 @@ $(document).ready(function () {
     $.ajax(`api/books/${id}`, {
       type: "PUT",
       data: newReadState,
-    }).then(function () { });
+    }).then(function () {});
     location.reload();
   });
 
