@@ -63,7 +63,7 @@ $(document).ready(function () {
             type: "POST",
             data: newClickedBook,
           }).then(function () {
-            // location.reload();
+            location.reload();
           });
         });
       });
