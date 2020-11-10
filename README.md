@@ -17,9 +17,15 @@ Select the Heroku link listed in the Installation section, above. In the Shelf I
 #### Usage pics:
 ![open](./public/assets/img/ShelfOpen.PNG)
 
+##### Search:
+
 ![search](./public/assets/img/ShelfSearch.gif)
 
+##### CRUD:
+
 ![tableUsage](./public/assets/img/ShelfCRUD.gif)
+
+##### Chat:
 
 ![chat](./public/assets/img/ShelfChat.gif)
 
