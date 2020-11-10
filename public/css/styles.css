@@ -488,6 +488,7 @@ button.submit {
 
 /* iPads/Medium Screens */
 @media (min-width: 601px) and (max-width: 850px){
+
   #message-container {
     height: 368px;
     background-color: #323b40;
