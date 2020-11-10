@@ -33,7 +33,7 @@ function signUpUser(email, password){
     window.location.replace("/books");
     // window.location.href="/books";
   })
-  .catch(handleLoginErr);
+  .error(err => console.log(err));
 }
 
 function handleLoginErr(err){
