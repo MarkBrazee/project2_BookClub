@@ -45,6 +45,7 @@ $(document).ready(function () {
 
 
         $(searchedBook).on("click", (event) => {
+          
           console.log("click")
           console.log(event.currentTarget.children[1].children[0].innerText)
           let newClickedBook = {
