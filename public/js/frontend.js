@@ -1,4 +1,11 @@
 $(document).ready(function(){
+  $("#searchRes").hide();
+  $(".btn-danger").hide()
+
+  $(".btn-danger").on("click", function(){
+    $("#searchRes").hide();
+    $(".btn-danger").hide();
+  })
 
   $.get("/api/user_data").then(function(data){
     $(".member-name").text(data.email);
@@ -11,6 +18,8 @@ $(document).ready(function(){
   const messageInput = document.getElementById("message-input");
 
   $("#bookSearch").on("click", function (event) {
+    $("#searchRes").show();
+    $(".btn-danger").show()
     event.preventDefault();
     let searchTerm = $("#searchTerms").val()
     const settings = {
@@ -22,22 +31,23 @@ $(document).ready(function(){
 
     $.ajax(settings).done(function (response) {
 
-      response.items.forEach(element => {
-
+      response.items.forEach(element => {        
         searchedBook = $("<div>").addClass("card book-searched")
 
-        title = $("<h5>").text(element.volumeInfo.title).addClass("nonDisplay")
-        authors = $("<p>").text(element.volumeInfo.authors[0]).addClass("nonDisplay")
+        title = $("<h5>").text(element.volumeInfo.title).addClass("display")
+        authors = $("<p>").text(element.volumeInfo.authors[0]).addClass("display")
 
         coverPic = $("<img>").attr("src", element.volumeInfo.imageLinks.smallThumbnail)
         coverPic.attr("class", "coverPic card-img-top")
         searchedBook.append(coverPic)
         cardBody = $("<div>").addClass("overlay")
         searchedBook.append(cardBody)
-        searchedBook.append(title)
-        searchedBook.append(authors)
-
+        cardBody.append(title)
+        cardBody.append(authors)
+        
         $("#searchRes").append(searchedBook)
+
+
         $(searchedBook).on("click", (event) => {
           console.log("click")
           console.log(event.currentTarget.children[2].innerText)
@@ -85,6 +95,7 @@ $(document).ready(function(){
       location.reload()
     })
   })
+  
   $(".chat-page").hide();
 
   $(".submit").click(function () {
@@ -163,5 +174,7 @@ $(document).ready(function(){
     var objDiv = document.getElementById("message-container");
     objDiv.scrollTop = objDiv.scrollHeight;
   }
+
+  
 
 })
