@@ -1,4 +1,4 @@
-const isAuthenticated = require("../config/middleware/isAuthenticated");
+var isAuthenticated = require("../config/middleware/isAuthenticated");
 let db = require("../models")
 
 var path = require("path");
@@ -11,14 +11,16 @@ module.exports = (app)=>{
     if(req.user){
       res.redirect("/books");
     }
-    res.sendFile(path.join(__dirname, "../public/signup.html"));
+    // res.sendFile(path.join(__dirname, "../public/signup.html"));
+    res.render('index');
   });
 
   app.get("/login", (req, res)=>{
     if(req.user){
       res.redirect("/books");
     }
-    res.sendFile(path.join(__dirname, "../public/login.html"));
+    // res.sendFile(path.join(__dirname, "../public/login.html"));
+    res.render('login');
   });
 
   app.get("/books", isAuthenticated, (req, res)=>res.render("index"));
