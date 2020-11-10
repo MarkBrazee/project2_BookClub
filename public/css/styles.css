@@ -410,19 +410,116 @@ button.submit {
 }
 
 /* Screen size Responsive */
+/* Phones */
 @media only screen and (max-width: 600px) {
-  #message-container{
-      height: 80%;
-    }
-}
+  footer{
+    display: block;
+    margin-top: 144%;
+  }
 
-@media (min-width: 601px) and (max-width: 850px){
   #message-container{
-    height: 61%;
+    height: 80%;
+  }
+
+  .jumbotron{
+    margin-bottom: 0;
+    padding: 0px;
+  }
+
+  .title{
+    font-family: 'Playfair Display SC', serif;
+    color: #6c7c69;
+    float: none;
+    margin: 0px 0px 0px 0px;
+    font-size: 25px;
+    }
+
+  .book-logo {
+    width: 12%;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .login-page{
+    background-color: #323b40;
+    color: #dce0e3;
+    padding-top: 8%;
+    display: block;
+    margin-top: 731%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 5px solid #dce0e3;
+    height: 500px;
+    position: absolute;
+  }
+
+  .chat-page{
+    background-color: #323b40;
+    color: #dce0e3;
+    display: block;
+    margin-top: 731%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 500px;
+    position: absolute;
+  }
+
+  .card-deck .card{
+    border-radius: 15px;
+    border: 6px solid #eee;
+    height: 500px;
+    width: 100%;
+    display: block;
+    margin: 23px auto;
+  }
+
+  .searchRes{
+    width: 77%;
+    height: 415px;
+    overflow: auto;
+    border: 9px solid white;
+    background: #323b40;
+    box-shadow: 0px 1px 3px #696969;
+    border-radius: 9px;
+    display: block;
+    margin: 23px 45px;
   }
 }
 
-.chat-head{
-  text-align: center;
-  font-family: 'Merriweather', serif;
+/* iPads/Medium Screens */
+@media (min-width: 601px) and (max-width: 850px){
+
+  #message-container {
+    height: 368px;
+    background-color: #323b40;
+    width: 100%;
+    font-weight: 600;
+    overflow: auto;
+    margin-top: 0%;
+    border: 5px solid #dfe3e5;
+    border-bottom: none;
+}
+
+.title{
+    font-family: 'Playfair Display SC', serif;
+    color: #6c7c69;
+    float: none;
+    margin: 0px;
+}
+
+.book-logo{
+    margin-left: 1%;
+    display: block;
+    margin: 0 auto;
+    width: 12%;
+
+}
+
+.btn-primary{
+  margin-left: -29px;
+}
+
+.submitChat{
+  margin: 44px auto;
+}
 }
