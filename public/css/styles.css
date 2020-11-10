@@ -378,7 +378,12 @@ body {
   font-family: 'Merriweather', serif;
   font-weight: bold;
   color: #323B40;
-  width: 50%;
+  width: 100%;
+}
+
+
+.buy{
+  width: 50%
 }
 .card-text {
   font-family: 'Merriweather', serif;
@@ -410,3 +415,11 @@ body {
   font-family: 'Merriweather', serif;
 }
 
+.reading{
+  width: auto;
+}
+
+
+.navLogo, .nav-link, .currently-reading, h3{
+  color: #6c7c69 !important;
+}
